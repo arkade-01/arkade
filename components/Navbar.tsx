@@ -47,7 +47,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
           </div>
 
           {isMobileNavOpen || isAnimating ? (
-            <nav className={`lg:hidden flex flex-col fixed xs:w-[45%] xr:w-[50%] h-screen bg-[#222222] left-0 top-0 z-[999px] transition-opacity duration-500 transform xs:px-3 xr:px-4 py-4 items-center justify-between
+            <nav className={`lg:hidden flex flex-col fixed xs:w-[50%] xr:w-[60%] h-screen bg-[#222222] left-0 top-0 z-[999px] transition-opacity duration-500 transform xs:px-3 xr:px-4 py-4 items-center justify-between
             ${isAnimating 
               ? "fade-out" 
               : "fade-in"}`} 
