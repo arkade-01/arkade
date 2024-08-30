@@ -10,7 +10,7 @@ const MyPortfolio = () => {
           <h1 className='mb-2 font-bold text-3xl text-[#06FCD8]'>My Portfolio</h1>
           
           <div className='lg:flex lg:gap-3 lg:items-center'>
-            <p className=''>Here's a collection of some recent projects that I've worked on alongside talented individuals from various companies around. While these projects represent only a small fraction of my overall portfolio, they showcase the collaborative effort and diverse expertise that went into their creation.</p>
+            <p className=''>{`Here's a collection of some recent projects that I've worked on alongside talented individuals from various companies around. While these projects represent only a small fraction of my overall portfolio, they showcase the collaborative effort and diverse expertise that went into their creation.`}</p>
             <div className='mt-10 lg:mt-0'>
               <Button text='See more!' link='work'/>
             </div>
