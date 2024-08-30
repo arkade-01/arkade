@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import Image from 'next/image'
+import { projectImgs } from '@/data'
 
 const MyPortfolio = () => {
   return (
@@ -16,7 +17,14 @@ const MyPortfolio = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className='flex  sm:flex-nowrap mt-7 lg:justify-between xs:justify-between items-center w-full'>
+          {projectImgs.map((pimg) => (
+            <div key={pimg.id}
+            className="xs:m-1 m-2">
+              <Image src={pimg.img} alt={`${pimg.img}`}
+              className='xs:items-center xs:w-full sm:w-auto sm:h-auto'/>
+            </div>
+          ))}
         </div>
       </div>
     </>
