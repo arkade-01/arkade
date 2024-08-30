@@ -8,10 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        'xs': '320px', // Ensure the 'xs' breakpoint is still available
+        'xx': '350px', // Ensure the 'xs' breakpoint is still available
+        'xr': '400px', // Ensure the 'xs' breakpoint is still available
       },
     },
   },
