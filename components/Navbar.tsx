@@ -64,7 +64,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
                   src={closenav}
                   alt="close nav"/>
                 </div>
-                <div className='flex justify-start items-center gap-2'>
+                <div className='flex justify-start items-center gap-2 mb-3'>
                   <Image
                   src={arkade}
                   alt='arkade img'
@@ -81,7 +81,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
                       <Link
                       key={id} 
                       href={`${nav.path}`}
-                      className={`flex text-white w-full px-10 py-3 justify-center cursor-pointer items-center my-3 rounded-xl
+                      className={`flex text-white w-full px-10 xs:py-2 xx:py-3 xr:py-4 justify-center cursor-pointer items-center my-3 rounded-xl
                       ${activePath === nav.path
                         ? "bg-black"
                         : "bg-[#2d2d2d]"}`}
