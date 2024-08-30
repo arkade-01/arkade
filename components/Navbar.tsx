@@ -91,7 +91,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
                     ))}
                   </ul>
               </div>
-              <div className='flex items-center justify-center mb-5'>
+              <div className='flex items-center justify-center mb-10'>
                 {navSocials.map((navSocial) => (
                   <Link
                   key={navSocial.name}
