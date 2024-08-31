@@ -1,4 +1,4 @@
-import { linkedin, github, x, project1, project2, project3, project4 } from "@/public/images"
+import { linkedin, github, x, project1, project2, project3, project4, javascript, typescript, rust, python, anchor, hardhat } from "@/public/images"
 
 export const navLinks = [
   {
@@ -53,5 +53,39 @@ export const projectImgs = [
   {
     id: 4,
     img: project4,
+  },
+]
+
+
+export const stacks = [
+  {
+    id: 1,
+    img: javascript,
+    name: "Javascript"
+  },
+  {
+    id: 2,
+    img: rust,
+    name: "Rust"
+  },
+  {
+    id: 3,
+    img: hardhat,
+    name: "Hardhat"
+  },
+  {
+    id: 4,
+    img: typescript,
+    name: "Typescript"
+  },
+  {
+    id: 5,
+    img: anchor,
+    name: "Anchor"
+  },
+  {
+    id: 6,
+    img: python,
+    name: "Python"
   },
 ]

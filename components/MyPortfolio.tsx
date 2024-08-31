@@ -6,7 +6,7 @@ import { projectImgs } from '@/data'
 const MyPortfolio = () => {
   return (
     <>
-      <div className="w-full mt-28 mb-10 ">
+      <div className="w-full mt-28 mb-10">
         <div className='flex flex-col place-items-start'>
           <h1 className='mb-2 font-bold text-3xl text-[#06FCD8]'>My Portfolio</h1>
           
@@ -17,10 +17,10 @@ const MyPortfolio = () => {
             </div>
           </div>
         </div>
-        <div className='flex  sm:flex-nowrap mt-7 lg:justify-between xs:justify-between items-center w-full'>
+        <div className='flex  sm:flex-nowrap mt-10 lg:justify-between xs:justify-between items-center w-full'>
           {projectImgs.map((pimg) => (
             <div key={pimg.id}
-            className="xs:m-1 m-2">
+            className="xs:m-0 m-2">
               <Image src={pimg.img} alt={`${pimg.img}`}
               className='xs:items-center xs:w-full sm:w-auto sm:h-auto'/>
             </div>
