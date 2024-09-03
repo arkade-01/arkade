@@ -35,15 +35,15 @@ if (!navLinks || !Array.isArray(navLinks)) {
 
   return (
     <>
-        <div className='lg:hidden flex justify-between xs:py-1 xx:py-2 xr:py-3'>
+        <div className='lg:hidden flex justify-between xs:py-1 xx:py-2 xr:py-3 w-full'>
           <div className='flex'>
-            <Image src={arkade} alt='arkade img' width={60}/>
-            <Image src={hamburger} alt='hamburger img' width={35} className='cursor-pointer lg:hidden' onClick={openNav}/>
+            <Image src={arkade} alt='arkade img' width={60} className='xs:w-16 h-auto'/>
+            <Image src={hamburger} alt='hamburger img' width={35} className='xs:w-8 h-auto cursor-pointer lg:hidden' onClick={openNav}/>
           </div>
         
           <div className='flex justify-center gap-3 items-center mr-2'>
           <span className="w-[10px] h-[10px] bg-[#43DA92] rounded-full"></span>
-              <p className="text-[#43DA92] font-bold ">Available</p>
+              <p className="text-[#43DA92] xs:text-sm xx:text-base font-bold ">Available</p>
           </div>
 
           {isMobileNavOpen || isAnimating ? (

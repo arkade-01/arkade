@@ -17,6 +17,8 @@ import hardhat from "./hardhat.svg"
 import typescript from "./typescript.svg"
 import python from "./python.svg"
 import anchor from "./anchor.svg"
+import jrd from "./jrd.svg"
+import hireme from "./hireme.svg"
 
 
 export {
@@ -39,4 +41,6 @@ export {
   typescript,
   python,
   anchor,
+  jrd,
+  hireme
 }

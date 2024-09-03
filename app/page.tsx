@@ -3,6 +3,8 @@ import Hero from "@/components/Hero"
 import Navbar from "@/components/Navbar";
 import MyPortfolio from "@/components/MyPortfolio";
 import WhatImInto from "@/components/WhatImInto";
+import Testimonial from "@/components/Testimonial";
+import CallToAction from "@/components/CallToAction";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
         <Hero />
         <MyPortfolio />
         <WhatImInto />
+        <Testimonial />
+        <CallToAction />
       </div>
     </main>
   );

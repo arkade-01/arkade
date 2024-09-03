@@ -15,6 +15,9 @@ body {
   color: white;
 }
 
+span.arkade {
+  color: #06FDC8
+}
 
 @keyframes fadeIn {
   from {
