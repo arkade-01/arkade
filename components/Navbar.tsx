@@ -35,7 +35,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
 
   return (
     <>
-        <div className='lg:hidden flex justify-between xs:py-[14px] xx:py-[18px] xr:py-[22px] w-full'>
+        <div className='lg:hidden flex justify-between xs:py-5 xx:py-6 xr:py-7 w-full'>
           <div className='flex'>
             <Image src={hamburger} alt='hamburger img' width={35} className='xs:w-6 xr:w-8 h-auto cursor-pointer lg:hidden' onClick={openNav}/>
           </div>
