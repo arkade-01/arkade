@@ -49,7 +49,7 @@ const page = () => {
                   <Image 
                     src={pastP.img} 
                     alt={`${pastP.name}`}
-                    className='xs:w-48 sm:w-80 h-auto rounded-tr-xl rounded-br-xl'
+                    className='xs:w-52 sm:w-80 h-auto rounded-tr-xl rounded-br-xl'
                     />
               </div>
                 <p className='my-2 xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
