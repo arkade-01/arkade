@@ -19,6 +19,14 @@ import python from "./python.svg"
 import anchor from "./anchor.svg"
 import jrd from "./jrd.svg"
 import hireme from "./hireme.svg"
+import infinityLogo from "./infinityLogo.svg"
+import horizonLogo from "./horizonLogo.svg"
+import forgeLogo from "./forgeLogo.svg"
+import zakatChainLogo from "./zakatChainLogo.svg"
+import infinityProject from "./infinityProject.svg"
+import horizonProject from "./horizonProject.svg"
+import forgeProject from "./forgeProject.svg"
+import zakatChainProject from "./zakatChainProject.svg"
 
 
 export {
@@ -42,5 +50,13 @@ export {
   python,
   anchor,
   jrd,
-  hireme
+  hireme,
+  infinityLogo,
+  horizonLogo,
+  forgeLogo,
+  zakatChainLogo,
+  infinityProject,
+  horizonProject,
+  forgeProject,
+  zakatChainProject,
 }
