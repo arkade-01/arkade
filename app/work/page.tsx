@@ -7,13 +7,13 @@ import { pastProjects, workExperience } from '@/data'
 const page = () => {
   return (
     <>
-      <div className='overflow-hidden mx-auto sm:px-10 xs:px-3 xx:px-5 max-w-6xl w-full'>
+      <div className='overflow-hidden mx-auto sm:px-10 xs:px-3 xx:px-5 max-w-5xl w-full'>
         <Navbar />
         <div className='mt-10 sm:mt-12 mb-12  md:w-[90%] lg:w-[80%]'>
           <h1 className='xs:text-2xl xx:text-[2rem]  xs:leading-9 sm:text-4xl font-bold'>
             Work Experience
           </h1>
-          <p className=' xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
+          <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
           Here is a list of some of the places I’ve worked as a backend developer, blockchain developer and a smart contract developer.
           </p>
         </div>

@@ -9,7 +9,7 @@ import CallToAction from "@/components/CallToAction";
 export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center overflow-hidden sm:px-10 xs:px-3 xx:px-5">
-      <div className="max-w-6xl w-full">
+      <div className="max-w-5xl w-full">
         <Navbar />
         <Hero />
         <MyPortfolio />
