@@ -46,7 +46,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
           </div>
 
           {isMobileNavOpen || isAnimating ? (
-            <nav className={`lg:hidden flex flex-col fixed xs:w-[50%] xr:w-[60%] sm:w-[45%] h-screen bg-[#222222] left-0 top-0 z-[999px] transition-opacity duration-500 transform xs:px-3 xr:px-5 py-4 items-center justify-between
+            <nav className={`lg:hidden flex flex-col fixed xs:w-[60%] xr:w-[75%] sm:w-[45%] h-screen bg-[#222222] left-0 top-0 z-[999px] transition-opacity duration-500 transform xs:px-3 xr:px-5 py-4 items-center justify-between
             ${isAnimating 
               ? "fade-out" 
               : "fade-in"}`} 
@@ -112,7 +112,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
             <Image src={arkade} alt='arkade img' width={60}/><div className='flex justify-center items-center'>
                     <Image src={Arkadenav} alt='arkade'
                     className='lg:w-7 lg:h-7'/>
-                    <p className='flex lg:text-lg text-white font-medium'>rkade</p>
+                    <p className='flex lg:text-xl text-white font-medium'>rkade</p>
                   </div>
           </div>
           
