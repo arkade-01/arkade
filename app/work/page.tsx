@@ -9,7 +9,7 @@ const page = () => {
     <>
       <div className='overflow-hidden mx-auto sm:px-10 xs:px-3 xx:px-5 max-w-6xl w-full'>
         <Navbar />
-        <div className='mt-10 mb-12'>
+        <div className='mt-10 sm:mt-12 mb-12  md:w-[90%] lg:w-[80%]'>
           <h1 className='xs:text-2xl xx:text-[2rem]  xs:leading-9 sm:text-4xl font-bold'>
             Work Experience
           </h1>
@@ -17,7 +17,7 @@ const page = () => {
           Here is a list of some of the places I’ve worked as a backend developer, blockchain developer and a smart contract developer.
           </p>
         </div>
-        <div className='mb-28'>
+        <div className='mb-28 md:w-[90%] lg:w-[80%]'>
             {workExperience.map((workE, id) => (
               <div key={id}
               className='my-9'>
@@ -40,7 +40,7 @@ const page = () => {
                   <Image 
                     src={pastP.logo} 
                     alt={`${pastP.name}`}
-                    className='w-28 sm:w-32 lg:w-36 h-auto'
+                    className='xs:w-16 sm:w-32 lg:w-36 h-auto'
                     />
                     <h2 className='text-[#06FDC8] font-bold text-xs'>
                       {pastP.name}
@@ -49,7 +49,7 @@ const page = () => {
                   <Image 
                     src={pastP.img} 
                     alt={`${pastP.name}`}
-                    className='w-72 sm:w-80 h-auto rounded-tr-xl rounded-br-xl'
+                    className='xs:w-[172px] sm:w-80 h-auto rounded-tr-xl rounded-br-xl'
                     />
               </div>
                 <p className='my-2 xs:text-xs xr:text-sm sm:text-base xr:text-justify'>

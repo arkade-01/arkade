@@ -28,7 +28,7 @@ const CallToAction = () => {
           </div>
           <div className='flex xs:flex-col xs:justify-end xs:items-end sm:flex-row sm:items-center w-full'>
             <Button text='Download CV'/>
-            <div className='flex items-center justify-end xs:mt-2 sm:mt-0 sm:ml-2 lg:ml-5'>
+            <div className='flex items-center xs:justify-center sm:justify-end xs:mt-2 sm:mt-0 sm:ml-2 lg:ml-5'>
                 {navSocials.map((navSocial) => (
                   <Link
                   key={navSocial.name}
