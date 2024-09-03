@@ -35,19 +35,18 @@ if (!navLinks || !Array.isArray(navLinks)) {
 
   return (
     <>
-        <div className='lg:hidden flex justify-between xs:py-1 xx:py-2 xr:py-3 w-full'>
+        <div className='lg:hidden flex justify-between xs:py-[14px] xx:py-[18px] xr:py-[22px] w-full'>
           <div className='flex'>
-            <Image src={arkade} alt='arkade img' width={60} className='xs:w-16 h-auto'/>
-            <Image src={hamburger} alt='hamburger img' width={35} className='xs:w-8 h-auto cursor-pointer lg:hidden' onClick={openNav}/>
+            <Image src={hamburger} alt='hamburger img' width={35} className='xs:w-6 xr:w-8 h-auto cursor-pointer lg:hidden' onClick={openNav}/>
           </div>
         
-          <div className='flex justify-center gap-3 items-center mr-2'>
+          <div className='flex justify-center gap-3 items-center'>
           <span className="w-[10px] h-[10px] bg-[#43DA92] rounded-full"></span>
               <p className="text-[#43DA92] xs:text-sm xx:text-base font-bold ">Available</p>
           </div>
 
           {isMobileNavOpen || isAnimating ? (
-            <nav className={`lg:hidden flex flex-col fixed xs:w-[50%] xr:w-[60%] h-screen bg-[#222222] left-0 top-0 z-[999px] transition-opacity duration-500 transform xs:px-3 xr:px-4 py-4 items-center justify-between
+            <nav className={`lg:hidden flex flex-col fixed xs:w-[50%] xr:w-[60%] sm:w-[45%] h-screen bg-[#222222] left-0 top-0 z-[999px] transition-opacity duration-500 transform xs:px-3 xr:px-5 py-4 items-center justify-between
             ${isAnimating 
               ? "fade-out" 
               : "fade-in"}`} 
@@ -112,7 +111,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
           <div className='flex'>
             <Image src={arkade} alt='arkade img' width={60}/><div className='flex justify-center items-center'>
                     <Image src={Arkadenav} alt='arkade'
-                    className='w-4 h-4'/>
+                    className='lg:w-7 lg:h-7'/>
                     <p className='flex lg:text-lg text-white font-medium'>rkade</p>
                   </div>
           </div>
@@ -122,7 +121,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
                 <Link
                 key={id} 
                 href={`${nav.path}`}
-                className={`flex text-white w-full px-8  justify-center cursor-pointer items-center rounded-full
+                className={`flex text-white w-full px-8 xs:text-xs xx:text-sm sm:text-base justify-center cursor-pointer items-center rounded-full
                 ${activePath === nav.path
                   ? "bg-black py-4 font-medium"
                   : "bg-[#2d2d2d] "}`}
@@ -142,15 +141,14 @@ if (!navLinks || !Array.isArray(navLinks)) {
                   <Link
                   key={navSocial.name}
                   href={`${navSocial.path}`}
-                  className='bg-black px-2 py-2 items-center justify-center rounded-full xs:mx-1 xr:mx-2 lg:mx-1'>
+                  className='bg-black px-2 py-2 items-center justify-center rounded-full lg:mx-2'>
                     <Image
                     src={navSocial.img}
-                    width={23}
-                    height={23}
+                    className='sm:w-4 lg:w-5 sm:h-4 lg:h-5'
                     alt={`${navSocial.name}`}/>
                   </Link>
                 ))}
-              </div>
+            </div>
           </div>
           
         </div>
