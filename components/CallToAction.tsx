@@ -9,7 +9,7 @@ import { navSocials } from '@/data'
 const CallToAction = () => {
   return (
     <div className=' w-full mt-28 mb-7'>
-      <div className='w-full flex flex-col justify-between rounded-lg xs:border-1 sm:border-2 border-[#06FDC8] xs:p-3 xr:p-4'>
+      <div className='w-full flex flex-col justify-between rounded-lg xs:border sm:border-2 border-[#06FDC8] xs:p-3 xr:p-4'>
         <p className="mt-4 xs:text-xs xx:text-[15px] xr:text-sm font-semibold">Work with me</p>
         <h2 className='my-4 xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold'>
           {`Let's Create Amazing Things Together`}
