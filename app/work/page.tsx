@@ -40,9 +40,9 @@ const page = () => {
                   <Image 
                     src={pastP.logo} 
                     alt={`${pastP.name}`}
-                    className='xs:w-16 sm:w-32 lg:w-36 h-auto'
+                    className='xs:w-[72px] sm:w-32 lg:w-36 h-auto'
                     />
-                    <h2 className='text-[#06FDC8] font-bold text-xs'>
+                    <h2 className='text-[#06FDC8] font-bold xs:text-xs xr:text-sm md:text-base'>
                       {pastP.name}
                     </h2>
                 </div>
