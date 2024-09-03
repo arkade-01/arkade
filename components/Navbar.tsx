@@ -35,9 +35,9 @@ if (!navLinks || !Array.isArray(navLinks)) {
 
   return (
     <>
-        <div className='lg:hidden flex justify-between xs:py-5 xx:py-6 xr:py-7 w-full'>
+        <div className='lg:hidden flex justify-between xs:py-6 xx:py-7 w-full'>
           <div className='flex'>
-            <Image src={hamburger} alt='hamburger img' width={35} className='xs:w-6 xr:w-8 h-auto cursor-pointer lg:hidden' onClick={openNav}/>
+            <Image src={hamburger} alt='hamburger img' width={35} className='xs:w-8 xx:w-9 xr:w-10 h-auto cursor-pointer lg:hidden' onClick={openNav}/>
           </div>
         
           <div className='flex justify-center gap-3 items-center'>
