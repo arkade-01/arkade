@@ -1,7 +1,6 @@
-import CallToAction from '@/components/CallToAction'
-import Navbar from '@/components/Navbar'
-import { skills } from '@/data'
 import React from 'react'
+import Navbar from '@/components/Navbar'
+import CallToAction from '@/components/CallToAction'
 
 const page = () => {
   return (
@@ -34,15 +33,45 @@ const page = () => {
           In summary, <span className='arkade'>Arkade</span> is a highly skilled and passionate blockchain developer with a proven track record of success. His journey from an intensive class on deploying tokens to winning prestigious hackathons and advancing his knowledge at Ayaversity showcases his dedication and expertise. With a strong foundation in Solidity, Rust, and JavaScript, <span className='arkade'>Arkade</span> is well-equipped to develop innovative blockchain solutions that drive the evolution of decentralized technologies. His commitment to excellence, continuous learning, and community involvement position him as a valuable contributor to the blockchain industry and a visionary leader in the field
         </p>
       </div>
+      {/** TECHNICAL SKILLS */}
       <h1 className='xs:text-2xl xx:text-[2rem] xs:leading-9 sm:text-4xl font-bold mb-7 mt-14'>Skills</h1>
-      <h1>Technical Skills</h1>
-      <div>
-        {skills.map((skill, id) => (
-          <div key={id}>
-            <p>{skill.paragraph}</p>
-          </div>
-        ))}
-      </div>
+      <h1 className='mb-4 font-bold xs:text-base xx:text-[18px] xr:text-[22px] xr:leading-6 sm:text-[25px] sm:leading-6 text-[#06FCD8]'>Technical Skills</h1>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>JavaScript (Proficient): </span>I have in-depth experience with modern JavaScript (ES6+) features, including asynchronous programming (Promises, async/await), functional programming techniques, and DOM manipulation. I&apos;ve built interactive fullstack applications using frameworks like React and Vite , using frameworks like ethers js, wagmi to connect Smart contracts to the frontend application focusing on clean code and efficient state management.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>TypeScript (Advanced): </span>I leverage TypeScript&apos;s static typing to build scalable and maintainable applications. I&apos;m comfortable working with complex type systems, interfaces, generics, and decorators. My experience includes using TypeScript with both React projects and Solana/web3.js.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Python (Competent): </span>I use Python for back-end development, and scripting. I&apos;m familiar with popular frameworks like Django and Flask, and I&apos;ve worked on projects involving web scraping, automation.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Solidity (Intermediate): </span>I have experience developing smart contracts on the Ethereum blockchain using Solidity. I understand core blockchain concepts like decentralization, consensus mechanisms, and the EVM (Ethereum Virtual Machine). I&apos;ve built basic dApps and am familiar with common security practices in the blockchain space.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-10'>
+        <span className='skills'>Rust (Early-Stage): </span>I&apos;m currently exploring Rust for its emphasis on safety, concurrency, and performance. I&apos;ve completed beginner-level projects to understand its ownership and borrowing system, and I&apos;m interested in using it for building high-performance web services and systems-level applications. I&apos;m also familiar with anchor to build on solana.
+      </p>
+
+      {/** SOFT SKILLS */}
+      <h1 className='mb-4 font-bold xs:text-base xx:text-[18px] xr:text-[22px] xr:leading-6 sm:text-[25px] sm:leading-6 text-[#06FCD8]'>Soft Skills</h1>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Problem-solving: </span> My strong problem-solving abilities have been instrumental in exceeding client expectations. I consistently deliver innovative solutions by effectively analyzing complex challenges and implementing practical strategies.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Teamwork: </span> A proven team player, I thrive in collaborative environments and have contributed significantly to winning hackathons through effective communication and shared goal achievement.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Communication: </span> Possessing exceptional communication skills, I excel at building strong relationships with clients and colleagues. I can articulate complex ideas clearly and concisely, both verbally and in writing.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Critical thinking: </span> My ability to analyze situations objectively and develop creative solutions has been essential in overcoming obstacles. I excel at identifying root causes and implementing effective strategies.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Time management: </span> Renowned for my efficiency, I consistently deliver projects on time or ahead of schedule. I prioritize tasks effectively and optimize my workload to meet deadlines without compromising quality.
+      </p>
+      <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify mb-2'>
+        <span className='skills'>Adaptability: </span> I am highly adaptable and thrive in dynamic environments. My ability to quickly adjust to changing priorities and work processes enables me to excel in diverse roles and industries.
+      </p>
       <CallToAction />
     </div>
   )

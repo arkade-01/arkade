@@ -18,6 +18,10 @@ body {
 span.arkade {
   color: #06FDC8
 }
+span.skills {
+  color: #F6224E;
+  font-weight: 600;
+}
 
 @keyframes fadeIn {
   from {

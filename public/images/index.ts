@@ -27,6 +27,7 @@ import infinityProject from "./infinityProject.svg"
 import horizonProject from "./horizonProject.svg"
 import forgeProject from "./forgeProject.svg"
 import zakatChainProject from "./zakatChainProject.svg"
+import webarkade from "./webarkade.svg"
 
 
 export {
@@ -59,4 +60,5 @@ export {
   horizonProject,
   forgeProject,
   zakatChainProject,
+  webarkade
 }

@@ -14,7 +14,7 @@ const page = () => {
             Work Experience
           </h1>
           <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
-          Here is a list of some of the places I’ve worked as a backend developer, blockchain developer and a smart contract developer.
+          Here is a list of some of the places I&apos;ve worked as a backend developer, blockchain developer and a smart contract developer.
           </p>
         </div>
         <div className='mb-28 md:w-[90%] lg:w-[80%]'>
