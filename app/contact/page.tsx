@@ -30,15 +30,15 @@ const Contact = () => {
           <h1 className='xs:text-2xl xx:text-[2rem]  xs:leading-9 sm:text-4xl font-bold mb-7'>
             Socials
           </h1>
-          <div className='w-full'>
+          <div className='w-full flex flex-wrap justify-between items-center'>
             {socials.map((social, id) => (
               <div key={id}
-              className='flex flex-wrap my-3 items-center w-full'>
+              className='flex my-3 items-center justify-start xs:w-[47%] xr:[49%]'>
                 <div className='bg-black p-2 rounded-md'>
                   <Image src={social.img} alt={`${social.handle}`} className='flex w-6 h-auto'/>
                 </div>
-                <p className='font-bold mx-3'>{social.dash}</p>
-                <p className='text-[#06FDC8] font-medium'>{social.handle}</p>
+                <p className='font-bold mx-2'>{social.dash}</p>
+                <p className='text-[#06FDC8] font-medium xs:text-xs xr:text-sm sm:text-base text'>{social.handle}</p>
               </div>
             ))}
           </div>

@@ -32,30 +32,30 @@ function Form({
   }
 
   return (
-    <div className="max-w-4xl mb-10">
+    <div className="max-w-full mb-12">
       <form action="" className="mt-10" onSubmit={onsubmit}>
         <div className="flex gap-5">
           <input
             type="text"
             name=""
             id=""
-            className="bg-[#2D2D2D] w-full placeholder:text-[#FFFFFF66] text-[16px] lg:text-[30px] placeholder:pl-3 px-4 py-3 text-white "
             placeholder="Name"
             value={name}
             onChange={(e) => {
               setName(e.target.value);
             }}
+            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] text-[16px] lg:text-[30px] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base"
           />
           <input
             type="email"
             name=""
             id=""
-            className="bg-[#2D2D2D] w-full placeholder:text-[#FFFFFF66] text-[16px] lg:text-[30px]  placeholder:pl-3 px-4 py-3 text-white"
             placeholder="Email"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
+            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base"
           />
         </div>
         <div className="mt-5 mb-2">
@@ -68,21 +68,20 @@ function Form({
             onChange={(e) => {
               setSubject(e.target.value);
             }}
-            className="bg-[#2D2D2D] mb-5 w-full placeholder:text-[#FFFFFF66] text-[16px] lg:text-[30px]  placeholder:pl-3 px-4 py-3 text-white"
+            className="bg-[#2D2D2D] mb-5 w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base"
           />
-          <input
-            type="text"
+          <textarea
             name=""
             id=""
+            rows={10}
             placeholder="Message"
             value={message}
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            className="bg-[#2D2D2D] h-[250px] w-full placeholder:text-[#FFFFFF66] text-[16px] lg:text-[30px]  placeholder:pl-3 px-4 py-3 text-white text-wrap active:border-none active:border-transparent"
+            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base text-wrap active:border-none active:border-transparent resize-none overflow-hidden"
           />
         </div>
-        <Button text="Submit"/>
       </form>
     </div>
   );

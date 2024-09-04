@@ -1,4 +1,4 @@
-import { linkedin, github, x, project1, project2, project3, project4, javascript, typescript, rust, python, anchor, hardhat, infinityLogo, horizonLogo, forgeLogo, zakatChainLogo, infinityProject, horizonProject, forgeProject, zakatChainProject, webarkade} from "@/public/images"
+import { linkedin, github, x, project1, project2, project3, project4, javascript, typescript, rust, python, anchor, hardhat, infinityLogo, horizonLogo, forgeLogo, zakatChainLogo, infinityProject, horizonProject, forgeProject, zakatChainProject, webarkade, jrd} from "@/public/images"
 
 export const navLinks = [
   {
