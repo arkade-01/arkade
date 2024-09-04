@@ -13,7 +13,7 @@ const page = () => {
           <h1 className='xs:text-2xl xx:text-[2rem]  xs:leading-9 sm:text-4xl font-bold'>
             Work Experience
           </h1>
-          <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
+          <p className='xs:text-xs xr:text-sm sm:leading-5 sm:text-[15px]'>
           Here is a list of some of the places I&apos;ve worked as a backend developer, blockchain developer and a smart contract developer.
           </p>
         </div>
@@ -24,7 +24,7 @@ const page = () => {
                 <h4 className='mb-2 font-bold xs:text-base xx:text-[18px] xr:text-[22px] xr:leading-6 sm:text-[25px] sm:leading-6 text-[#06FCD8]'>
                   {workE.title}
                 </h4>
-                <p className='xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
+                <p className='xs:text-xs xr:text-sm sm:leading-5 sm:text-[15px]'>
                   {workE.desc}
                 </p>
               </div>
@@ -40,7 +40,7 @@ const page = () => {
                   <Image 
                     src={pastP.logo} 
                     alt={`${pastP.name}`}
-                    className='xs:w-[72px] sm:w-32 lg:w-36 h-auto'
+                    className='xs:w-24 sm:w-3522 lg:w-36 h-auto'
                     />
                     <h2 className='text-[#06FDC8] font-bold xs:text-xs xr:text-sm md:text-base'>
                       {pastP.name}
@@ -49,7 +49,7 @@ const page = () => {
                   <Image 
                     src={pastP.img} 
                     alt={`${pastP.name}`}
-                    className='xs:w-52 sm:w-80 h-auto rounded-tr-xl rounded-br-xl'
+                    className='xs:w-40 xx:w-44 xr:w-52 sm:w-80 h-auto rounded-tr-xl rounded-br-xl'
                     />
               </div>
                 <p className='my-2 xs:text-xs xr:text-sm sm:text-base xr:text-justify'>

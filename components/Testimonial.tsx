@@ -6,13 +6,13 @@ const Testimonial = () => {
   return (
     <div className='flex flex-col w-full mt-28 mb-10'>
       <h1 className='mb-3 font-bold xs:text-xl xx:text-2xl xr:text-[28px] sm:text-3xl text-[#06FCD8]'>Testimonial</h1>
-      <div className="flex sm:flex-row xs:flex-col sm:overflow-x-auto sm:overflow-y-hidden sm:hide-scrollbar max-w-full xs:space-y-6 sm:space-y-0 sm:space-x-4">
-        <div className="sm:min-w-[90%] lg:min-w-[85%]">
-          <div className="w-full bg-[#222222] p-2 rounded-lg sm:flex sm:space-x-4">
+      <div className="flex sm:flex-row xs:flex-col sm:overflow-x-auto sm:overflow-y-hidden sm:hide-scrollbar max-w-full xs:space-y-6 sm:space-y-0 sm:space-x-6">
+        <div className="sm:min-w-[90%]">
+          <div className="w-full bg-[#222222] p-2 rounded-lg sm:flex sm:space-x-3">
             <Image
               src={jrd}
               alt="jrd testimonial"
-              className="rounded-tl-lg rounded-bl-lg xs:w-[100px] xs:h-[122px] lg:w-[120px] lg:h-[146.4px]"
+              className="rounded-tl-lg rounded-bl-lg xs:w-[100px] xs:h-[122px] lg:w-[110px] lg:h-[134.2px]"
             />
             <p className="xs:text-xs xr:text-sm sm:text-[15px] sm:leading-5">
               “I am delighted to recommend <span className="arkade">Arkade</span>, 
@@ -33,12 +33,12 @@ const Testimonial = () => {
           </h2>
         </div>
 
-        <div className="sm:min-w-[90%] lg:min-w-[85%]">
-          <div className="w-full bg-[#222222] p-2 rounded-lg sm:flex sm:space-x-4">
+        <div className="sm:min-w-[90%]">
+          <div className="w-full bg-[#222222] p-2 rounded-lg sm:flex sm:space-x-3">
             <Image
               src={jrd}
               alt="jrd testimonial"
-              className="rounded-tl-lg rounded-bl-lg xs:w-[100px] xs:h-[122px] lg:w-[120px] lg:h-[146.4px]"
+              className="rounded-tl-lg rounded-bl-lg xs:w-[100px] xs:h-[122px] lg:w-[110px] lg:h-[134.2px]"
             />
             <p className="xs:text-xs xr:text-sm sm:text-[15px] sm:leading-5">
               “I am delighted to recommend <span className="arkade">Arkade</span>,
