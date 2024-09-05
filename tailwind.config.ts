@@ -15,7 +15,7 @@ const config: Config = {
         'xr': '400px', 
       },
       animation: {
-        'blink': 'blink-animation 2s infinite',
+        'blink': 'blink-animation 1.75s infinite',
       },
       keyframes: {
         'blink-animation': {

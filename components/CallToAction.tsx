@@ -19,11 +19,11 @@ const CallToAction = () => {
         <div className='flex justify-between items-center mt-10'>
           <div className='flex items-center'>
             <Image src={arkade} alt='arkade'
-            className='xs:w-14 xs:h-14 sm:w-16 sm:h-16 lg:w-[74px] lg:h-[74px]'/>
+            className='xs:w-14 xs:h-14 sm:w-16 lg:w-[74px]'/>
             <div className='flex xs:items-center sm:items-baseline'>
               <Image src={Arkadenav} alt='arkade'
                 className='xs:w-4 xs:h-4 xr:w-5 xr:h-5 place-self-center xs:mb-[2.7px] sm:mb-0 sm:w-6 sm:h-6 lg:w-7 lg:h-7'/>
-                <p className='flex text-white font-medium sm:text-lg lg:text-xl xr:mt-[0.75px] sm:mt-2'>rkade</p>
+                <p className='flex text-white font-medium sm:text-lg lg:text-xl xr:mt-[1.4px] sm:mt-2'>rkade</p>
             </div>
           </div>
           <div className='flex xs:flex-col xs:items-end sm:flex-row sm:items-center sm:justify-end w-full'>

@@ -41,8 +41,8 @@ if (!navLinks || !Array.isArray(navLinks)) {
           </div>
         
           <div className='flex justify-center gap-3 items-center'>
-          <span className="w-[10px] h-[10px] bg-[#43DA92] rounded-full"></span>
-              <p className="text-[#43DA92] xs:text-sm xx:text-base font-bold ">Available</p>
+          <span className="w-[10px] h-[10px] bg-[#43DA92] rounded-full animate-blink"></span>
+              <p className="text-[#43DA92] xs:text-sm xx:text-base font-bold">Available</p>
           </div>
 
           {isMobileNavOpen || isAnimating ? (
@@ -108,13 +108,13 @@ if (!navLinks || !Array.isArray(navLinks)) {
           ) : null }
         </div>
         <div className='hidden lg:flex justify-between xs:py-1 xx:py-2 xr:py-3 w-full'>
-          <div className='flex'>
-            <Image src={arkade} alt='arkade img' width={60}/><div className='flex justify-center items-center'>
+          <Link href="/" className='flex cursor-pointer'>
+            <Image src={arkade} alt='arkade img' className='xs:w-14 xs:h-14 sm:w-16 lg:w-[74px]'/><div className='flex justify-center items-center'>
                     <Image src={Arkadenav} alt='arkade'
                     className='lg:w-7 lg:h-7'/>
-                    <p className='flex lg:text-xl text-white font-medium'>rkade</p>
+                    <p className='flex lg:text-xl text-white font-medium mt-2'>rkade</p>
                   </div>
-          </div>
+          </Link>
           
           <ul className='flex rounded-full bg-[#2d2d2d] items-center justify-center'>
               {navLinks.map((nav, id) => (
