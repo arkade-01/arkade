@@ -18,7 +18,7 @@ const Testimonial = () => {
               “I&apos;ve had the opportunity to work with many talented developers, but <span className='arkade'>Arkade</span>, truly stands out as the best. He was the only blockchain dev that delivered our Product within the short deadline. <span className='arkade'>Arkade&apos;s</span> expertise in blockchain development is unparalleled, and his ability to navigate complex challenges with ease set him apart from everyone else. Not only is he technically brilliant, but his work ethic, collaboration, and character are second to none. Working with <span className='arkade'>Arkade</span> was an absolute pleasure, and I can say without hesitation that he is the best developer I&apos;ve ever had the privilege of working with.”
             </p>
           </div>
-          <h2 className="xs:text-xl xx:text-2xl xr:text-[28px] sm:text-3xl font-medium text-[#F6224E]">
+          <h2 className="xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold text-[#F6224E]">
             RAHMAN
           </h2>
         </div>
@@ -27,7 +27,7 @@ const Testimonial = () => {
             <Image
               src={jrd}
               alt="jrd"
-              className="rounded-tl-lg rounded-bl-lg  xs:w-[6.25rem] sm:w-[7.5rem] lg:w-[8rem]"
+              className="rounded-tl-lg rounded-bl-lg  xs:w-[6.25rem] sm:w-[7.5rem] lg:w-[7.8rem]"
             />
             <p className="xs:text-xs xr:text-sm sm:text-[15px] sm:leading-5">
               “I am delighted to recommend <span className="arkade">Arkade</span>, 
@@ -43,7 +43,7 @@ const Testimonial = () => {
               processes.”
             </p>
           </div>
-          <h2 className="xs:text-xl xx:text-2xl xr:text-[28px] sm:text-3xl font-medium text-[#F6224E]">
+          <h2 className="xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold text-[#F6224E]">
             $JRD
           </h2>
         </div>
