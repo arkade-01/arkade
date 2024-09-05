@@ -14,6 +14,15 @@ const config: Config = {
         'xx': '350px', // Ensure the 'xs' breakpoint is still available
         'xr': '400px', // Ensure the 'xs' breakpoint is still available
       },
+      animation: {
+        'blink': 'blink-animation 2s infinite',
+      },
+      keyframes: {
+        'blink-animation': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
+      }
     },
   },
   plugins: [

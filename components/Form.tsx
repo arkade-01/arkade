@@ -41,10 +41,11 @@ function Form({
             id=""
             placeholder="Name"
             value={name}
+            required
             onChange={(e) => {
               setName(e.target.value);
             }}
-            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] text-[16px] lg:text-[30px] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base"
+            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base"
           />
           <input
             type="email"
@@ -52,6 +53,7 @@ function Form({
             id=""
             placeholder="Email"
             value={email}
+            required
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -65,6 +67,7 @@ function Form({
             id=""
             placeholder="Subject"
             value={subject}
+            required
             onChange={(e) => {
               setSubject(e.target.value);
             }}
@@ -76,10 +79,11 @@ function Form({
             rows={10}
             placeholder="Message"
             value={message}
+            required
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base text-wrap active:border-none active:border-transparent resize-none overflow-hidden"
+            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base active:border-none active:border-transparent resize-none overflow-hidden"
           />
         </div>
       </form>

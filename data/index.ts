@@ -140,21 +140,25 @@ export const socials = [
   {
     img: x,
     dash: "-",
-    handle: "01_arkade"
+    handle: "01_arkade",
+    path: "https://x.com/01_arkade"
   },
   {
     img: github,
     dash: "-",
-    handle: "@yomidep"
+    handle: "@yomidep",
+    path: "https://github.com/yomidep"
   },
   {
     img: linkedin,
     dash: "-",
-    handle: "@Noah Biliamin"
+    handle: "@Noah Biliamin",
+    path: "https://www.linkedin.com/in/noah-biliamin-579743211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     img: webarkade,
     dash: "-",
-    handle: "@arkade"
+    handle: "@arkade",
+    path: "/"
   },
 ]

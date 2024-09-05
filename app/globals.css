@@ -52,3 +52,17 @@ span.skills {
 .fade-out {
   animation: fadeOut 0.5s ease-in-out forwards;
 }
+
+
+.blink {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  background-color: #06FDC8; /* Availability color */
+  border-radius: 50%; /* For a circular status */
+  animation: blink-animation 1s infinite; /* 1 second blink duration */
+}
+
+@keyframes blink-animation {
+  0%, 100% { opacity: 1; } /* Fully visible at the start and end */
+  50% { opacity: 0; } /* Invisible at the middle */
+}

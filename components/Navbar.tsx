@@ -132,7 +132,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
           </ul>
           <div className='flex justify-center items-center'>
             <div className='flex justify-center gap-3 items-center mr-2'>
-              <span className="w-[10px] h-[10px] bg-[#43DA92] rounded-full"></span>
+              <div className="w-[10px] h-[10px] bg-[#43DA92] blink rounded-full animate-blink"></div>
               <p className="text-[#43DA92] font-bold ">Available</p>
             </div>
 
