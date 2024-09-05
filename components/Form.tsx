@@ -83,7 +83,7 @@ function Form({
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base active:border-none active:border-transparent resize-none overflow-hidden"
+            className="bg-[#2D2D2D] w-full rounded-lg placeholder:text-[#FFFFFF66] placeholder:pl-3 xs:placeholder:text-[13px] placeholder:xr:text-[15px] px-4 py-3 text-white xs:text-xs xr:text-sm sm:text-base active:border-none active:border-transparent resize-none overflow-hidden"
           />
         </div>
       </form>

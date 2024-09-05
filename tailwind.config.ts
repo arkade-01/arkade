@@ -10,9 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        'xs': '320px', // Ensure the 'xs' breakpoint is still available
-        'xx': '350px', // Ensure the 'xs' breakpoint is still available
-        'xr': '400px', // Ensure the 'xs' breakpoint is still available
+        'xs': '320px',
+        'xx': '350px',
+        'xr': '400px', 
       },
       animation: {
         'blink': 'blink-animation 2s infinite',
@@ -22,7 +22,7 @@ const config: Config = {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
-      }
+      },
     },
   },
   plugins: [

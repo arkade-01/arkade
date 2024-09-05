@@ -6,7 +6,7 @@ import { arkade, hamburger, Arkadenav, closenav} from '@/public/images'
 import { navLinks, navSocials } from '@/data'
 import Link from 'next/link'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [activePath, setActivePath] = useState("")
   const [isAnimating, setIsAnimating] = useState(false);
@@ -132,7 +132,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
           </ul>
           <div className='flex justify-center items-center'>
             <div className='flex justify-center gap-3 items-center mr-2'>
-              <div className="w-[10px] h-[10px] bg-[#43DA92] blink rounded-full animate-blink"></div>
+              <div className="w-[10px] h-[10px] bg-[#43DA92] rounded-full animate-blink"></div>
               <p className="text-[#43DA92] font-bold ">Available</p>
             </div>
 
