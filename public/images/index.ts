@@ -17,7 +17,7 @@ import hardhat from "./hardhat.svg"
 import typescript from "./typescript.svg"
 import python from "./python.svg"
 import anchor from "./anchor.svg"
-import jrd from "./jrd.svg"
+import jrd from "./jrd.png"
 import hireme from "./hireme.svg"
 import infinityLogo from "./infinityLogo.svg"
 import horizonLogo from "./horizonLogo.svg"
@@ -28,6 +28,8 @@ import horizonProject from "./horizonProject.svg"
 import forgeProject from "./forgeProject.svg"
 import zakatChainProject from "./zakatChainProject.svg"
 import webarkade from "./webarkade.svg"
+import arrow from "./arrow.svg"
+import rahman from "./rahman.jpg"
 
 
 export {
@@ -60,5 +62,7 @@ export {
   horizonProject,
   forgeProject,
   zakatChainProject,
-  webarkade
+  webarkade,
+  arrow,
+  rahman
 }

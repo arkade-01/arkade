@@ -110,25 +110,29 @@ export const pastProjects = [
     logo: infinityLogo,
     name: "Infinity",
     img: infinityProject,
-    desc: "Infinity bot allows users trade perpetual markets at their finger tips using telegram bots"
+    desc: "Infinity bot allows users trade perpetual markets at their finger tips using telegram bots",
+    path: "http://infinity-xi-seven.vercel.app"
   },
   {
     logo: horizonLogo,
     name: "Horizon",
     img: horizonProject,
-    desc: "Horizon is a portfolio tracker built on arbitrum blockchain, gives you full access to your portfolio and assets on chain"
+    desc: "Horizon is a portfolio tracker built on arbitrum blockchain, gives you full access to your portfolio and assets on chain",
+    path: "http://horizon-silk.vercel.app"
   },
   {
     logo: forgeLogo,
     name: "Forge",
     img: forgeProject,
-    desc: "F0rge is a token deployer that allows users to create ERC-20 & ERC-721 tokens on any blockchain"
+    desc: "F0rge is a token deployer that allows users to create ERC-20 & ERC-721 tokens on any blockchain",
+    path: "https://f0rge.vercel.app/"
   },
   {
     logo: zakatChainLogo,
     name: "ZakatChain",
     img: zakatChainProject,
-    desc: "Zakatchain is a dapp that allows Muslims to pay their Zakat fee onchain"
+    desc: "Zakatchain is a dapp that allows Muslims to pay their Zakat fee onchain",
+    path: "https://ZakatChain.io"
   }
 ]
 

@@ -26,14 +26,14 @@ const CallToAction = () => {
                 <p className='flex text-white font-medium sm:text-lg lg:text-xl xr:mt-[0.75px] sm:mt-2'>rkade</p>
             </div>
           </div>
-          <div className='flex xs:flex-col xs:justify-end xs:items-end sm:flex-row sm:items-center w-full'>
+          <div className='flex xs:flex-col xs:items-end sm:flex-row sm:items-center sm:justify-end w-full'>
             <Button text='Download CV'/>
-            <div className='flex items-center xs:justify-center sm:justify-end xs:mt-2 sm:mt-0 sm:ml-2 lg:ml-5'>
+            <div className='flex xs:justify-center xs:mr-1 sm:mr-0  sm:justify-end xs:mt-2 sm:mt-0 sm:ml-2 md:ml-3 lg:ml-5'>
                 {navSocials.map((navSocial) => (
                   <Link
                   key={navSocial.name}
                   href={`${navSocial.path}`}
-                  className='bg-black hover:bg-gray-700 px-2 py-2 items-center justify-center rounded-full xs:mx-1 xr:mx-2 lg:mx-2'>
+                  className='flex bg-black hover:bg-[#2D2D2D] hover:transition hover:duration-500 px-2 py-2 items-center justify-center rounded-full xs:mx-1 xr:mx-2 lg:mx-2'>
                     <Image
                     src={navSocial.img}
                     alt={`${navSocial.name}`}

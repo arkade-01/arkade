@@ -1,10 +1,22 @@
-import React from 'react'
-import Image from 'next/image'
-import Navbar from '@/components/Navbar'
-import CallToAction from '@/components/CallToAction'
-import { pastProjects, workExperience } from '@/data'
+"use client";
 
-const page = () => {
+import Link from 'next/link';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { arrow } from '@/public/images';
+import Navbar from '@/components/Navbar';
+import CallToAction from '@/components/CallToAction';
+import { pastProjects, workExperience } from '@/data';
+
+const Work = () => {
+  const [isHovered, setIsHovered] = useState<number | null>(null);
+  const onMouseEnter = (id: number) => {
+    setIsHovered(id);
+  }
+  const onMouseLeave = () => {
+    setIsHovered(null);
+  }
+  
   return (
     <>
       <div className='overflow-hidden mx-auto sm:px-10 xs:px-3 xx:px-5 max-w-5xl w-full'>
@@ -35,23 +47,35 @@ const page = () => {
         <div className='flex flex-col items-start'>
           {pastProjects.map((pastP, id) => (
             <div key={id}  className='flex flex-col my-5 xs:w-full md:w-[90%] lg:w-[80%]'>
-              <div className='bg-[#111313] flex justify-between rounded-xl pl-5 items-center'>
+              <Link 
+                target='_blank'
+                href={`${pastP.path}`} 
+                onMouseEnter={() => onMouseEnter(id)}
+                onMouseLeave={onMouseLeave}
+                className='bg-[#111313] hover:bg-[#222222] flex justify-between rounded-xl pl-5 items-center hover:scale-105 hover:transition hover:duration-500'>
                 <div className="flex flex-col">
                   <Image 
                     src={pastP.logo} 
                     alt={`${pastP.name}`}
-                    className='xs:w-24 sm:w-32 lg:w-36 h-auto'
+                    className='xs:w-24 sm:w-32 md:w-36 h-auto'
                     />
-                    <h2 className='text-[#06FDC8] font-bold xs:text-xs xr:text-sm md:text-base'>
-                      {pastP.name}
-                    </h2>
+                    <div className='flex space-x-1 items-center'>
+                      <h2 className='text-[#06FDC8] font-semibold xs:text-xs xr:text-sm md:text-base'>
+                        {pastP.name}
+                      </h2>
+                      {isHovered === id && (<Image 
+                        src={arrow} 
+                        alt={`${pastP.name}`} 
+                        className='w-[14px] h-auto hover:transition hover:duration-500'
+                      />)}
+                    </div>
                 </div>
                   <Image 
                     src={pastP.img} 
                     alt={`${pastP.name}`}
-                    className='xs:w-40 xx:w-44 xr:w-52 sm:w-80 h-auto rounded-tr-xl rounded-br-xl'
+                    className='xs:w-44 xx:w-52 xr:w-72 sm:w-80 md:w-96 h-auto rounded-tr-xl rounded-br-xl'
                     />
-              </div>
+              </Link>
                 <p className='my-2 xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
                   {pastP.desc}
                 </p>
@@ -64,4 +88,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Work

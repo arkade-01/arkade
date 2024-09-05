@@ -63,7 +63,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
                   src={closenav}
                   alt="close nav"/>
                 </div>
-                <div className='flex justify-start items-center gap-2 mb-4'>
+                <div className='flex justify-center items-center mb-4 mr-4'>
                   <Image
                   src={arkade}
                   alt='arkade img'
@@ -71,8 +71,8 @@ if (!navLinks || !Array.isArray(navLinks)) {
                   />
                   <div className='flex justify-center items-center'>
                     <Image src={Arkadenav} alt='arkade'
-                    className='w-4 h-4'/>
-                    <p className='flex text-white font-medium'>rkade</p>
+                    className='w-6 h-auto'/>
+                    <p className='flex text-white font-medium mt-2 place-self-end'>rkade</p>
                   </div>
                 </div>
                 <ul className='flex flex-col items-center justify-center'>
@@ -95,7 +95,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
                   <Link
                   key={navSocial.name}
                   href={`${navSocial.path}`}
-                  className='bg-black px-2 py-2 items-center justify-center rounded-full xs:mx-1 xr:mx-2'>
+                  className='bg-black px-2 py-2 items-center justify-center rounded-full xs:mx-1 xr:mx-2 hover:bg-[#2D2D2D] hover:transition hover:duration-500'>
                     <Image
                     src={navSocial.img}
                     width={23}
@@ -141,7 +141,7 @@ if (!navLinks || !Array.isArray(navLinks)) {
                   <Link
                   key={navSocial.name}
                   href={`${navSocial.path}`}
-                  className='bg-black px-2 py-2 items-center justify-center rounded-full lg:mx-2'>
+                  className='bg-black px-2 py-2 items-center justify-center rounded-full lg:mx-2 hover:bg-[#2D2D2D] hover:transition hover:duration-500'>
                     <Image
                     src={navSocial.img}
                     className='sm:w-4 lg:w-5 sm:h-4 lg:h-5'
