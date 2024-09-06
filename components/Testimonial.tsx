@@ -14,9 +14,9 @@ const Testimonial = () => {
               alt="rahman"
               className="rounded-tl-lg rounded-bl-lg xs:rounded-lg sm:rounded-tr-none sm:rounded-br-none xs:w-[6.25rem] sm:w-[7.5rem] lg:w-[8rem]"
             />
-            <p className="xs:text-xs xr:text-sm sm:text-[15px]">
+            <div className="xs:text-xs xr:text-sm sm:text-[15px]">
               “I&apos;ve had the opportunity to work with many talented developers, but <span className='arkade'>Arkade</span>, truly stands out as the best. He was the only blockchain dev that delivered our Product within the short deadline. <span className='arkade'>Arkade&apos;s</span> expertise in blockchain development is unparalleled, and his ability to navigate complex challenges with ease set him apart from everyone else. Not only is he technically brilliant, but his work ethic, collaboration, and character are second to none. Working with <span className='arkade'>Arkade</span> was an absolute pleasure, and I can say without hesitation that he is the best developer I&apos;ve ever had the privilege of working with.” <span className='sm:hidden font-bold mx-3'>-</span> <h2 className="xs:inline sm:hidden xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold text-[#F6224E]">RAHMAN</h2>
-            </p>
+            </div>
           </div>
           <h2 className="xs:hidden sm:flex xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold text-[#F6224E]">
             RAHMAN
@@ -29,7 +29,7 @@ const Testimonial = () => {
               alt="jrd"
               className="rounded-tl-lg rounded-bl-lg xs:rounded-lg sm:rounded-tr-none sm:rounded-br-none xs:w-[6.25rem] sm:w-[7.5rem] lg:w-[7.8rem]"
             />
-            <p className="xs:text-xs xr:text-sm sm:text-[15px]">
+            <div className="xs:text-xs xr:text-sm sm:text-[15px]">
               “I am delighted to recommend <span className="arkade">Arkade</span>, 
               who played an instrumental role in the development of ZakatChain.
               Throughout the project, <span className="arkade">Arkade </span>
@@ -41,7 +41,7 @@ const Testimonial = () => {
               His skills in smart contract development and wallet integration were particularly
               valuable, allowing us to offer precise Zakat calculations and seamless donation
               processes.” <span className='sm:hidden font-bold mx-3'>-</span> <h2 className="xs:inline sm:hidden xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold text-[#F6224E]">$JRD</h2>
-            </p>
+            </div>
           </div>
           <h2 className="xs:hidden sm:flex xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold text-[#F6224E]">
             $JRD
