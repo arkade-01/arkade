@@ -23,12 +23,12 @@ export const navSocials = [
   {
     name: "git",
     img: github,
-    path: "https://github.com/yomidep"
+    path: "https://github.com/arkade-01"
   },
   {
     name: "x",
     img: x,
-    path: "https://x.com/01_arkade"
+    path: "https://x.com/arkade_dev"
   },
   {
     name: "linkedin",
@@ -141,12 +141,12 @@ export const socials = [
     img: x,
     dash: "-",
     handle: "01_arkade",
-    path: "https://x.com/01_arkade"
+    path: "https://x.com/arkade_dev"
   },
   {
     img: github,
     dash: "-",
-    handle: "@yomidep",
+    handle: "@arkade-01",
     path: "https://github.com/yomidep"
   },
   {
