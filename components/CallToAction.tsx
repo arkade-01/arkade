@@ -9,12 +9,6 @@ import { arkade, Arkadenav } from '@/public/images'
 import { navSocials } from '@/data'
 
 const CallToAction = () => {
-
-  const handleCVDownload = () => {
-    window.open("/Noah_Biliamin_CV.pdf", "_blank");
-  };
-
-
   return (
     <div className=' w-full mt-28 mb-7'>
       <div className='w-full flex flex-col justify-between rounded-lg xs:border sm:border-[1.5px] border-[#06FDC8] xs:p-4 xr:p-5'>
@@ -35,7 +29,7 @@ const CallToAction = () => {
             </div>
           </div>
           <div className='flex xs:flex-col xs:items-end sm:flex-row sm:items-center sm:justify-end w-full'>
-            <Button text='View Resume' onClick={handleCVDownload}/>
+            <Button text='View Resume' link='/resume'/>
             <div className='flex xs:justify-center xs:mr-1 sm:mr-0  sm:justify-end xs:mt-2 sm:mt-0 sm:ml-2 md:ml-3 lg:ml-5'>
                 {navSocials.map((navSocial) => (
                   <Link
