@@ -11,7 +11,7 @@ import { navSocials } from '@/data'
 const CallToAction = () => {
 
   const handleCVDownload = () => {
-    window.open("https://docs.google.com/document/d/1Hi-XrDA65mD27Svy2FaZaa-Z_d4UtLsOaQRpOW4B3Uo/edit?usp=sharing", "_blank", "noopener,noreferrer");
+    window.open("/Noah_Biliamin_CV.pdf", "_blank");
   };
 
 
