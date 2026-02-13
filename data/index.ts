@@ -107,32 +107,42 @@ export const workExperience = [
 
 export const pastProjects = [
   {
-    logo: infinityLogo,
-    name: "Infinity",
-    img: infinityProject,
-    desc: "Infinity bot allows users trade perpetual markets at their finger tips using telegram bots",
-    path: "http://infinity-xi-seven.vercel.app"
+    name: "Prediction Arena",
+    desc: "Onchain prediction markets on Monad",
+    path: "https://prediction-arena-monad.onrender.com",
+    video: "https://youtu.be/BYAu4rKq3_I",
+    tags: ["Monad", "DeFi", "Solidity"]
   },
   {
-    logo: horizonLogo,
-    name: "Horizon",
-    img: horizonProject,
-    desc: "Horizon is a portfolio tracker built on arbitrum blockchain, gives you full access to your portfolio and assets on chain",
-    path: "http://horizon-silk.vercel.app"
+    name: "Refuel Bot",
+    desc: "Cross-chain gas bridging via Telegram",
+    path: "https://t.me/RefuelPreciumbot",
+    video: "https://youtube.com/shorts/W4XeV8I2TH0",
+    tags: ["Telegram Bot", "Cross-chain"]
   },
   {
-    logo: forgeLogo,
+    name: "ArkPay",
+    desc: "Crypto to fiat payment gateway",
+    path: "https://ark-pay.vercel.app/",
+    tags: ["Payments", "Web3"]
+  },
+  {
+    name: "NoNameCabal",
+    desc: "Trading bot on Solana",
+    path: "https://t.me/noNameCabalBot",
+    tags: ["Solana", "Telegram Bot", "Trading"]
+  },
+  {
     name: "Forge",
-    img: forgeProject,
-    desc: "F0rge is a token deployer that allows users to create ERC-20 & ERC-721 tokens on any blockchain",
-    path: "https://f0rge.vercel.app/"
+    desc: "Deploy ERC-20 & ERC-721 tokens on any chain",
+    path: "https://f0rge.vercel.app/",
+    tags: ["Token Factory", "Multi-chain"]
   },
   {
-    logo: zakatChainLogo,
     name: "ZakatChain",
-    img: zakatChainProject,
-    desc: "Zakatchain is a dapp that allows Muslims to pay their Zakat fee onchain",
-    path: "https://ZakatChain.io"
+    desc: "Onchain Zakat payments for Muslims",
+    path: "https://zakatchain.io",
+    tags: ["Charity", "DeFi"]
   }
 ]
 

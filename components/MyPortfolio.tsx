@@ -11,7 +11,7 @@ const MyPortfolio = () => {
           <h1 className='mb-2 font-bold xs:text-xl xx:text-2xl xr:text-[28px] sm:text-3xl text-[#06FCD8]'>My Portfolio</h1>
           
           <div className='lg:flex lg:flex-1 lg:gap-3 lg:items-center lg:justify-between'>
-            <p className='lg:w-[75%] xs:text-xs xr:text-sm sm:leading-5 sm:text-[15px]'>{`Here's a collection of some recent projects that I've worked on alongside talented individuals from various companies around. While these projects represent only a small fraction of my overall portfolio, they showcase the collaborative effort and diverse expertise that went into their creation.`}</p>
+            <p className='lg:w-[75%] xs:text-xs xr:text-sm sm:leading-5 sm:text-[15px] text-[#9a9a9a]'>Things I&apos;ve shipped.</p>
             <div className='mt-10 lg:mt-0 lg:items-center lg:flex-shrink-0'>
               <Button text='See more!' link='work'/>
             </div>
@@ -21,7 +21,7 @@ const MyPortfolio = () => {
           {projectImgs.map((pimg) => (
             <div key={pimg.id}
             className="xs:m-0 m-2">
-              <Image src={pimg.img} alt={`${pimg.img}`}
+              <Image src={pimg.img} alt={`Project ${pimg.id}`}
               className='xs:items-center xs:w-full sm:w-auto sm:h-auto'/>
             </div>
           ))}

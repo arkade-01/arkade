@@ -1,91 +1,77 @@
-"use client";
-
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import { arrow } from '@/public/images';
 import Navbar from '@/components/Navbar';
 import CallToAction from '@/components/CallToAction';
 import { pastProjects, workExperience } from '@/data';
 
 const Work = () => {
-  const [isHovered, setIsHovered] = useState<number | null>(null);
-  const onMouseEnter = (id: number) => {
-    setIsHovered(id);
-  }
-  const onMouseLeave = () => {
-    setIsHovered(null);
-  }
-  
   return (
-    <>
-      <div className='overflow-hidden mx-auto sm:px-10 xs:px-3 xx:px-5 max-w-5xl w-full'>
-        <Navbar />
-        <div className='mt-10 sm:mt-12 mb-12  md:w-[90%] lg:w-[80%]'>
-          <h1 className='xs:text-2xl xx:text-[2rem]  xs:leading-9 sm:text-4xl font-bold'>
-            Work Experience
-          </h1>
-          <p className='xs:text-xs xr:text-sm sm:leading-5 sm:text-[15px]'>
-          Here is a list of some of the places I&apos;ve worked as a backend developer, blockchain developer and a smart contract developer.
-          </p>
-        </div>
-        <div className='mb-28 md:w-[90%] lg:w-[80%]'>
-            {workExperience.map((workE, id) => (
-              <div key={id}
-              className='my-9'>
-                <h4 className='mb-2 font-bold xs:text-base xx:text-[18px] xr:text-[22px] xr:leading-6 sm:text-[25px] sm:leading-6 text-[#06FCD8]'>
-                  {workE.title}
-                </h4>
-                <p className='xs:text-xs xr:text-sm sm:leading-5 sm:text-[15px]'>
-                  {workE.desc}
-                </p>
-              </div>
-            ))}
-        </div>
-
-        <h1 className='mb-7 font-bold xs:text-[22px] xs:leading-9 xx:text-[26px] xx:leading-9 xr:text-[29px] sm:text-3xl text-[#06FCD8]'>Past Projects</h1>
-        <div className='flex flex-col items-start'>
-          {pastProjects.map((pastP, id) => (
-            <div key={id}  className='flex flex-col my-5 xs:w-full md:w-[90%] lg:w-[80%]'>
-              <Link 
-                target='_blank'
-                href={`${pastP.path}`} 
-                onMouseEnter={() => onMouseEnter(id)}
-                onMouseLeave={onMouseLeave}
-                className='bg-[#111313] hover:bg-[#222222] flex justify-between rounded-xl pl-5 items-center hover:scale-105 hover:transition hover:duration-500'>
-                <div className="flex flex-col">
-                  <Image 
-                    src={pastP.logo} 
-                    alt={`${pastP.name}`}
-                    className='xs:w-24 sm:w-32 md:w-36 h-auto'
-                    />
-                    <div className='flex space-x-1 items-center'>
-                      <h2 className='text-[#06FDC8] font-semibold xs:text-xs xr:text-sm md:text-base'>
-                        {pastP.name}
-                      </h2>
-                      {isHovered === id && (<Image 
-                        src={arrow} 
-                        alt={`${pastP.name}`} 
-                        className='w-[14px] h-auto hover:transition hover:duration-500'
-                      />)}
-                    </div>
-                </div>
-                  <Image 
-                    src={pastP.img} 
-                    alt={`${pastP.name}`}
-                    className='xs:w-44 xx:w-52 xr:w-72 sm:w-80 md:w-96 h-auto rounded-tr-xl rounded-br-xl'
-                    />
-              </Link>
-                <p className='my-2 xs:text-xs xr:text-sm sm:text-base xr:text-justify'>
-                  {pastP.desc}
-                </p>
-            </div>
-          ))}
-        </div>
-        <CallToAction />
+    <div className='overflow-hidden mx-auto sm:px-10 xs:px-3 xx:px-5 max-w-5xl w-full'>
+      <Navbar />
+      
+      {/* Work Experience */}
+      <div className='mt-10 sm:mt-12 mb-8'>
+        <h1 className='xs:text-2xl sm:text-3xl font-bold mb-6'>
+          Work Experience
+        </h1>
       </div>
-    </>
-  )
-}
+      
+      <div className='mb-16 space-y-6'>
+        {workExperience.map((work, id) => (
+          <div key={id} className='bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-5'>
+            <h4 className='font-bold text-lg text-[#06FCD8] mb-2'>
+              {work.title}
+            </h4>
+            <p className='text-sm text-[#9a9a9a]'>
+              {work.desc}
+            </p>
+          </div>
+        ))}
+      </div>
 
-export default Work
+      {/* Projects */}
+      <h1 className='xs:text-2xl sm:text-3xl font-bold text-[#06FCD8] mb-8'>
+        Projects
+      </h1>
+      
+      <div className='grid xs:grid-cols-1 sm:grid-cols-2 gap-4 mb-12'>
+        {pastProjects.map((project, id) => (
+          <Link
+            key={id}
+            href={project.path}
+            target='_blank'
+            className='group bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-5 hover:border-[#06FCD8] transition-all duration-300'
+          >
+            <div className='flex justify-between items-start mb-3'>
+              <h3 className='text-xl font-bold text-white group-hover:text-[#06FCD8] transition-colors'>
+                {project.name}
+              </h3>
+              {project.video && (
+                <span className='text-xs px-2 py-1 rounded-full bg-[#2a2a2a] text-[#9a9a9a]'>
+                  📹 Demo
+                </span>
+              )}
+            </div>
+            
+            <p className='text-[#9a9a9a] text-sm mb-4'>{project.desc}</p>
+            
+            <div className='flex flex-wrap gap-2'>
+              {project.tags.map((tag, idx) => (
+                <span 
+                  key={idx}
+                  className='text-xs px-2 py-1 rounded-full bg-[#2a2a2a] text-[#06FCD8]'
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      <CallToAction />
+    </div>
+  );
+};
+
+export default Work;

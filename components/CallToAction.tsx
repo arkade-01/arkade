@@ -22,7 +22,7 @@ const CallToAction = () => {
         <h2 className='my-4 xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold'>
           {`Let's Create Amazing Things Together`}
         </h2>
-        <Button text='Hire Me' icon={SvgComponent}/>
+        <Button text='Hire Me' link='https://t.me/noahbiliamin' icon={SvgComponent}/>
 
         <div className='flex justify-between items-center mt-10'>
           <div className='flex items-center'>

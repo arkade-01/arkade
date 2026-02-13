@@ -20,8 +20,11 @@ const Hero = () => {
           </span>
           Blockchain Developer
         </h1>
-        <p className='text-[#9a9a9a] xs:text-sm xx:text-[15px] xxr:text-base mb-10'>
+        <p className='text-[#9a9a9a] xs:text-sm xx:text-[15px] xxr:text-base mb-4'>
           Smart contract engineer
+        </p>
+        <p className='text-[#c0c0c0] xs:text-xs sm:text-sm mb-8'>
+          Built ZakatChain • Won 2 hackathons • Ships fast
         </p>
           <Button text='Contact Me!' link='contact'/>
       </div>
