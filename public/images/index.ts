@@ -30,6 +30,7 @@ import zakatChainProject from "./zakatChainProject.svg"
 import webarkade from "./webarkade.svg"
 import arrow from "./arrow.svg"
 import rahman from "./rahman.jpg"
+import telegram from "./telegram.svg"
 
 
 export {
@@ -64,5 +65,6 @@ export {
   zakatChainProject,
   webarkade,
   arrow,
-  rahman
+  rahman,
+  telegram
 }

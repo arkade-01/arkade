@@ -1,4 +1,4 @@
-import { linkedin, github, x, project1, project2, project3, project4, javascript, typescript, rust, python, anchor, hardhat, infinityLogo, horizonLogo, forgeLogo, zakatChainLogo, infinityProject, horizonProject, forgeProject, zakatChainProject, webarkade, jrd} from "@/public/images"
+import { linkedin, github, x, project1, project2, project3, project4, javascript, typescript, rust, python, anchor, hardhat, infinityLogo, horizonLogo, forgeLogo, zakatChainLogo, infinityProject, horizonProject, forgeProject, zakatChainProject, telegram, jrd} from "@/public/images"
 
 export const navLinks = [
   {
@@ -166,9 +166,9 @@ export const socials = [
     path: "https://www.linkedin.com/in/noah-biliamin-579743211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
-    img: webarkade,
+    img: telegram,
     dash: "-",
-    handle: "@arkade",
-    path: "/"
+    handle: "@noahbiliamin",
+    path: "https://t.me/noahbiliamin"
   },
 ]
