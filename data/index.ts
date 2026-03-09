@@ -101,11 +101,17 @@ export const workExperience = [
   },
   {
     title: "Smart Contract Developer at DAFFLE - JULY 2024 - PRESENT",
-    desc: "As a blockchain developer at Zakat Chain, I focused on implementing the smart contract logic necessary to transition Zakat payments onto the blockchain. This involved designing and deploying smart contracts to handle Zakat transactions efficiently and securely. Additionally, I integrated these smart contracts with the user interface, ensuring a seamless interaction between the blockchain backend and the front-end application. My role required meticulous attention to security, usability, and performance to facilitate effective and transparent Zakat payments"
+    desc: "As a smart contract developer at Daffle, I designed and implemented the core protocol logic for a decentralized raffle platform. This involved building secure, gas-efficient smart contracts for ticket purchases, randomness generation, and prize distribution. I also worked on integrating the contracts with the frontend and ensuring the system was auditable and transparent for users."
   },
 ]
 
 export const pastProjects = [
+  {
+    name: "Wayfinder",
+    desc: "On-chain wallet intelligence — trace identities, bridges, and exit wallets",
+    path: "https://wayfinder-fe.vercel.app",
+    tags: ["OSINT", "DeFi", "NestJS", "Next.js"]
+  },
   {
     name: "Prediction Arena",
     desc: "Onchain prediction markets on Monad",
