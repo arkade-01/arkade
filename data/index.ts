@@ -109,7 +109,7 @@ export const pastProjects = [
   {
     name: "Wayfinder",
     desc: "On-chain wallet intelligence — trace identities, bridges, and exit wallets",
-    path: "https://wayfinder-fe.vercel.app",
+    path: "https://wayfinder.fun",
     tags: ["OSINT", "DeFi", "NestJS", "Next.js"]
   },
   {
