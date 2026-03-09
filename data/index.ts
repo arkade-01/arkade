@@ -28,7 +28,7 @@ export const navSocials = [
   {
     name: "x",
     img: x,
-    path: "https://x.com/arkade_dev"
+    path: "https://x.com/01_arkade"
   },
   {
     name: "linkedin",
@@ -151,13 +151,13 @@ export const socials = [
     img: x,
     dash: "-",
     handle: "01_arkade",
-    path: "https://x.com/arkade_dev"
+    path: "https://x.com/01_arkade"
   },
   {
     img: github,
     dash: "-",
     handle: "@arkade-01",
-    path: "https://github.com/yomidep"
+    path: "https://github.com/arkade-01"
   },
   {
     img: linkedin,
