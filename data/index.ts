@@ -33,7 +33,7 @@ export const navSocials = [
   {
     name: "linkedin",
     img: linkedin,
-    path: "https://www.linkedin.com/in/noah-biliamin-579743211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    path: "https://www.linkedin.com/in/Noahbiliamin15"
   },
 ]
 
@@ -92,63 +92,63 @@ export const stacks = [
 
 export const workExperience = [
   {
-    title: "Backend developer at Ophir Builders - JULY 2023- DEC 2023",
+    title: "Lead Backend Developer at Roomz - APRIL 2025 - PRESENT",
+    desc: "Architected a scalable NestJS backend for real-time raffles, live bidding, and voting — 42 RESTful API endpoints across 6 core feature domains, Redis pub/sub driving real-time state without hitting the database on every read, and sub-300ms response times at up to 300 concurrent users."
+  },
+  {
+    title: "Junior Backend Developer at TagoCash - MAY 2026 - PRESENT",
+    desc: "Building and shipping features on a NestJS/Prisma backend for a cross-border digital wallet, supporting instant transfers, QR payments, and local cash deposits across US, European, and African payment rails."
+  },
+  {
+    title: "Backend Developer at Ophir Builders - JULY 2023 - DEC 2023",
     desc: "As a backend developer, I was responsible for designing and implementing various functions to enhance the functionality of web applications. This included developing and integrating server-side logic and APIs to enable seamless interaction between users and the application. My work focused on ensuring robust performance, security, and scalability, allowing for an efficient and responsive user experience."
-  },
-  {
-    title: "Blockchain Developer at Zakat chain - NOV 2023 - PRESENT",
-    desc: "As a blockchain developer at Zakat Chain, I focused on implementing the smart contract logic necessary to transition Zakat payments onto the blockchain. This involved designing and deploying smart contracts to handle Zakat transactions efficiently and securely. Additionally, I integrated these smart contracts with the user interface, ensuring a seamless interaction between the blockchain backend and the front-end application. My role required meticulous attention to security, usability, and performance to facilitate effective and transparent Zakat payments"
-  },
-  {
-    title: "Smart Contract Developer at DAFFLE - JULY 2024 - PRESENT",
-    desc: "As a smart contract developer at Daffle, I designed and implemented the core protocol logic for a decentralized raffle platform. This involved building secure, gas-efficient smart contracts for ticket purchases, randomness generation, and prize distribution. I also worked on integrating the contracts with the frontend and ensuring the system was auditable and transparent for users."
   },
 ]
 
 export const pastProjects = [
   {
-    name: "Wayfinder",
-    desc: "On-chain wallet intelligence — trace identities, bridges, and exit wallets",
-    path: "https://wayfinder.fun",
-    tags: ["OSINT", "DeFi", "NestJS", "Next.js"]
+    name: "ArkPay",
+    desc: "Payment gateway backend — API-driven crypto-to-fiat conversion and transaction settlement",
+    path: "https://ark-pay.vercel.app/",
+    tags: ["Payments", "API", "Backend"]
   },
   {
-    name: "Prediction Arena",
-    desc: "Onchain prediction markets on Monad",
-    path: "https://prediction-arena-monad.onrender.com",
-    video: "https://youtu.be/BYAu4rKq3_I",
-    tags: ["Monad", "DeFi", "Solidity"]
+    name: "Wayfinder",
+    desc: "NestJS API aggregating on-chain data to trace wallet identities, bridge activity, and exit paths",
+    path: "https://wayfinder.fun",
+    tags: ["NestJS", "Next.js", "OSINT", "API"]
   },
   {
     name: "Refuel Bot",
-    desc: "Cross-chain gas bridging via Telegram",
+    desc: "Telegram bot backend — real-time bridge-quote aggregation via API and WebSocket streams across chains",
     path: "https://t.me/RefuelPreciumbot",
     video: "https://youtube.com/shorts/W4XeV8I2TH0",
-    tags: ["Telegram Bot", "Cross-chain"]
+    tags: ["Telegram Bot", "Real-time", "API"]
   },
   {
-    name: "ArkPay",
-    desc: "Crypto to fiat payment gateway",
-    path: "https://ark-pay.vercel.app/",
-    tags: ["Payments", "Web3"]
-  },
-  {
-    name: "NoNameCabal",
-    desc: "Trading bot on Solana",
-    path: "https://t.me/noNameCabalBot",
-    tags: ["Solana", "Telegram Bot", "Trading"]
-  },
-  {
-    name: "Forge",
-    desc: "Deploy ERC-20 & ERC-721 tokens on any chain",
-    path: "https://f0rge.vercel.app/",
-    tags: ["Token Factory", "Multi-chain"]
+    name: "Prediction Arena",
+    desc: "API and market-resolution backend for onchain prediction markets on Monad",
+    path: "https://prediction-arena-monad.onrender.com",
+    video: "https://youtu.be/BYAu4rKq3_I",
+    tags: ["Backend", "DeFi", "Monad"]
   },
   {
     name: "ZakatChain",
-    desc: "Onchain Zakat payments for Muslims",
+    desc: "Donation-payments backend integrated with a full-stack app for transparent onchain giving",
     path: "https://zakatchain.io",
-    tags: ["Charity", "DeFi"]
+    tags: ["Payments", "Full-stack"]
+  },
+  {
+    name: "NoNameCabal",
+    desc: "Trading bot backend — real-time price monitoring and automated trade execution on Solana",
+    path: "https://t.me/noNameCabalBot",
+    tags: ["Telegram Bot", "Real-time", "Solana"]
+  },
+  {
+    name: "Forge",
+    desc: "Multi-chain token deployment API — configurable ERC-20/721 factory with deployment tracking",
+    path: "https://f0rge.vercel.app/",
+    tags: ["API", "Token Factory", "Multi-chain"]
   }
 ]
 
@@ -169,7 +169,7 @@ export const socials = [
     img: linkedin,
     dash: "-",
     handle: "@Noah Biliamin",
-    path: "https://www.linkedin.com/in/noah-biliamin-579743211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    path: "https://www.linkedin.com/in/Noahbiliamin15"
   },
   {
     img: telegram,

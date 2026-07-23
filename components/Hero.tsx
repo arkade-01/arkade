@@ -18,13 +18,13 @@ const Hero = () => {
               className='xs:w-[1.55rem] xx:w-[1.9rem] xr:w-[2rem] sm:w-[2.2rem] flex ml-1 justify-center xs:mb-[2.4px] xx:mb-[3px] xr:mb-[3.6px] sm:mb-0 h-auto'/>rkade.
             </span>
           </span>
-          Blockchain Developer
+          Backend Engineer
         </h1>
         <p className='text-[#9a9a9a] xs:text-sm xx:text-[15px] xxr:text-base mb-4'>
-          Smart contract engineer
+          APIs, payments, real-time systems
         </p>
         <p className='text-[#c0c0c0] xs:text-xs sm:text-sm mb-8'>
-          Built ZakatChain • Won 2 hackathons • Ships fast
+          Built ArkPay • Scaled Roomz to 300+ concurrent users • Ships fast
         </p>
           <Button text='Contact Me!' link='contact'/>
       </div>
