@@ -14,9 +14,9 @@ const CallToAction = () => {
       <div className='w-full flex flex-col justify-between rounded-lg xs:border sm:border-[1.5px] border-[#06FDC8] xs:p-4 xr:p-5'>
         <p className="mt-4 xs:text-xs xx:text-[15px] xr:text-sm font-semibold">Work with me</p>
         <h2 className='my-4 xs:text-base xx:text-lg xr:text-xl sm:text-2xl font-semibold'>
-          {`Let's Create Amazing Things Together`}
+          {`Need an API, a real-time system, or payment infrastructure built?`}
         </h2>
-        <Button text='Hire Me' link='https://t.me/noahbiliamin' icon={SvgComponent}/>
+        <Button text='Start a Project' link='https://t.me/arkkkade' icon={SvgComponent}/>
 
         <div className='flex justify-between items-center mt-10'>
           <div className='flex items-center'>

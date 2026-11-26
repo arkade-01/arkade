@@ -5,8 +5,8 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Arkade | Blockchain Developer & Smart Contract Engineer",
-  description: "Full-stack blockchain developer specializing in smart contracts, DeFi protocols, and decentralized applications. Building on Ethereum, Solana, and beyond.",
+  title: "Arkade | Backend Engineer — APIs, Real-time Systems & Payments",
+  description: "I build production backend systems: APIs, real-time tools, and payment infrastructure. NestJS, Python, and modern backend stacks, with blockchain integrations when needed.",
 };
 
 export default function RootLayout({

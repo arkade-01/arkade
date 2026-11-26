@@ -105,6 +105,24 @@ export const workExperience = [
   },
 ]
 
+export const servicePackages = [
+  {
+    name: "Custom Backend / API Build",
+    desc: "NestJS, Python, or similar. Fixed-scope or weekly engagement.",
+    price: "$2,000 – $5,000",
+  },
+  {
+    name: "Real-time Systems & Bots",
+    desc: "Telegram bots, WebSocket systems, automation, and live data flows.",
+    price: "$3,500 – $7,000",
+  },
+  {
+    name: "Payments & Integrations",
+    desc: "Crypto + traditional payment flows, settlement logic, and related infrastructure.",
+    price: "$8,000 – $20,000",
+  },
+]
+
 export const pastProjects = [
   {
     name: "ArkPay",
@@ -157,24 +175,24 @@ export const socials = [
     img: x,
     dash: "-",
     handle: "01_arkade",
-    path: "https://x.com/01_arkade"
+    path: "https://x.com/01_arkade",
   },
   {
     img: github,
     dash: "-",
     handle: "@arkade-01",
-    path: "https://github.com/arkade-01"
+    path: "https://github.com/arkade-01",
   },
   {
     img: linkedin,
     dash: "-",
     handle: "@Noah Biliamin",
-    path: "https://www.linkedin.com/in/Noahbiliamin15"
+    path: "https://www.linkedin.com/in/Noahbiliamin15",
   },
   {
     img: telegram,
     dash: "-",
-    handle: "@noahbiliamin",
-    path: "https://t.me/noahbiliamin"
+    handle: "@arkkkade",
+    path: "https://t.me/arkkkade",
   },
-]
+];
