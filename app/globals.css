@@ -2,67 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
-  background-color: #1d1d1d;
-  background-image: url("/images/desktop.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: bottom;
-}
-
-* {
-  box-sizing: border-box;
-  color: white;
-}
-
-span.arkade {
-  color: #06FDC8
-}
-span.skills {
-  color: #F6224E;
-  font-weight: 600;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    visibility: hidden;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-.fade-out {
-  animation: fadeOut 0.5s ease-in-out forwards;
-}
-
-
-.blink {
-  width: 20px; /* Adjust size as needed */
-  height: 20px; /* Adjust size as needed */
-  background-color: #06FDC8; /* Availability color */
-  border-radius: 50%; /* For a circular status */
-  animation: blink-animation 1s infinite; /* 1 second blink duration */
-}
-
-@keyframes blink-animation {
-  0%, 100% { opacity: 1; } /* Fully visible at the start and end */
-  50% { opacity: 0; } /* Invisible at the middle */
+  margin: 0;
+  background: #2a1d14;
 }

@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>arkade.lol desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2a1d14}
+a{color:var(--c)}a:hover{color:var(--c3)}
+.scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0) 2px,rgba(0,0,0,.3) 3px,rgba(0,0,0,0) 4px);z-index:50}
+.glass{position:absolute;inset:0;pointer-events:none;z-index:51;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%),linear-gradient(115deg,rgba(255,255,255,0) 70%,rgba(255,255,255,.05) 78%,rgba(255,255,255,0) 86%)}
+.cur{display:inline-block;width:10px;height:18px;background:var(--c);vertical-align:-3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.ic{background:none;border:0;color:var(--c);font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;padding:6px;width:100px;text-decoration:none}
+.ic:hover span,.ic:focus-visible span{background:var(--c);color:#0d1113;text-shadow:none}
+.tile{width:32px;height:32px;border:2px solid var(--c4);background:rgba(0,0,0,.35);color:var(--c);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;box-shadow:2px 2px 0 var(--c4)}
+.tile:hover{border-color:var(--c)}
+.plain{background:none;border:0;padding:0;font:inherit;color:inherit;text-shadow:inherit;cursor:pointer;text-align:inherit;width:100%}
+.card:hover .th{border-color:var(--c)}
+.btn{display:inline-block;background:var(--c);color:#0d1113;text-shadow:none;border:0;box-shadow:3px 3px 0 var(--c4);font:700 15px 'Courier Prime',monospace;padding:6px 14px;cursor:pointer;text-decoration:none}
+.btn:hover{color:#0d1113;filter:brightness(1.1)}
+.ghost{display:inline-block;background:transparent;color:var(--c);border:2px solid var(--c);box-shadow:3px 3px 0 var(--c4);font:700 14px 'Courier Prime',monospace;padding:3px 10px;cursor:pointer;text-decoration:none}
+.fld{width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1px solid var(--c4);color:var(--c);font:15px 'Courier Prime',monospace;padding:7px 10px}
+.fld::placeholder{color:var(--c4)}
+.wbtn{width:28px;height:26px;border:2px solid #0d1113;background:transparent;color:#0d1113;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center}
+.px{font-family:'Pixelify Sans',sans-serif;font-weight:700}
+</style>
+</helmet>
+<div style="position:relative;width:1440px;height:900px;overflow:hidden;background:linear-gradient(160deg,#c7a57f 0%,#a07a55 40%,#5a3d28 100%);font-family:'Courier Prime',monospace">
+<div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,236,200,0) 0,rgba(255,236,200,0) 34px,rgba(255,236,200,.16) 36px,rgba(255,236,200,.16) 52px);mask-image:linear-gradient(90deg,transparent 55%,#000 85%);-webkit-mask-image:linear-gradient(90deg,transparent 55%,#000 85%)"></div>
+<div aria-hidden="true" style="position:absolute;left:0;top:88px;width:380px;height:20px;background:linear-gradient(180deg,#6a4126,#3d2414);box-shadow:0 10px 20px rgba(0,0,0,.3)"></div>
+
+<div style="position:absolute;left:150px;top:40px;width:1140px;height:960px;box-sizing:border-box;padding:54px 58px 0;border-radius:26px;background:linear-gradient(180deg,#e4dccb 0%,#d3c9b4 60%,#bfb49d 100%);box-shadow:0 40px 90px rgba(40,20,5,.55),inset 0 2px 0 rgba(255,255,255,.6),inset -14px 0 30px rgba(0,0,0,.08)">
+<div style="padding:10px;border-radius:30px / 44px;background:#2b2620;box-shadow:inset 0 4px 14px rgba(0,0,0,.7)">
+
+<div style="--c:{{t.c}};--c2:{{t.c2}};--c3:{{t.c3}};--c4:{{t.c4}};--g:{{t.g}};--sh:{{t.sh}};position:relative;height:740px;border-radius:24px / 38px;overflow:hidden;background:radial-gradient(ellipse at 45% 40%,#1b2225 0%,#0e1214 60%,#060809 100%);color:var(--c);text-shadow:0 0 6px var(--g)">
+<div class="scan"></div>
+<div class="glass"></div>
+
+<div style="position:absolute;top:44px;left:48px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 10px;z-index:5;font-size:15px">
+<button class="ic" onClick="{{openWork}}"><svg width="60" height="50" viewBox="0 0 24 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h8v2h14v14H1z" fill="currentColor"></path><path d="M1 7h22v1H1z" fill="#0d1113" opacity=".45"></path></svg><span style="padding:0 4px">Work</span></button>
+<button class="ic" onClick="{{openAbout}}"><svg width="50" height="56" viewBox="0 0 18 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 0h11l5 5v15H1z" fill="currentColor"></path><path d="M4 7h10v1H4zM4 10h10v1H4zM4 13h10v1H4zM4 16h6v1H4z" fill="#0d1113" opacity=".55"></path></svg><span style="padding:0 4px">About me</span></button>
+<button class="ic" onClick="{{openServices}}"><svg width="60" height="50" viewBox="0 0 24 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M8 1h8v4h7v14H1V5h7zM10 3v2h4V3z" fill="currentColor"></path><path d="M1 10h22v1H1zM11 9h2v4h-2z" fill="#0d1113" opacity=".5"></path></svg><span style="padding:0 4px">Services</span></button>
+<button class="ic" onClick="{{openJournal}}"><svg width="50" height="56" viewBox="0 0 18 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 0h16v20H1z" fill="currentColor"></path><path d="M3 0h1v20H3zM6 4h8v1H6zM6 7h8v1H6zM6 10h6v1H6z" fill="#0d1113" opacity=".55"></path></svg><span style="padding:0 4px">Journal</span></button>
+<button class="ic" onClick="{{openContact}}"><svg width="62" height="44" viewBox="0 0 24 17" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h24v17H0z" fill="currentColor"></path><path d="M1 1h2v1h2v1h2v1h2v1h2v1h2v-1h2v-1h2v-1h2v-1h2v-1h2v1h-2v1h-2v1h-2v1h-2v1h-2v1h-2v-1h-2v-1h-2v-1h-2v-1h-2v-1h-2z" fill="#0d1113" opacity=".55"></path></svg><span style="padding:0 4px">Contact</span></button>
+<a class="ic" href="https://www.arkade.lol/resume"><svg width="54" height="54" viewBox="0 0 20 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h17l3 3v17H0z" fill="currentColor"></path><path d="M5 0h9v6H5zM3 11h14v9H3z" fill="#0d1113" opacity=".5"></path><path d="M11 1h2v4h-2z" fill="currentColor"></path></svg><span style="padding:0 4px">CV</span></a>
+</div>
+
+<div style="position:absolute;right:52px;bottom:96px;text-align:right;z-index:3">
+<div style="font-size:21px;line-height:1.3;max-width:420px;margin-left:auto">Backend engineer in Lagos. APIs, real-time bots and payment rails for teams that need it shipped.</div>
+<div class="px" style="font-size:168px;line-height:.9;margin-top:24px;letter-spacing:2px">arkade</div>
+</div>
+<div style="position:absolute;left:48px;bottom:72px;font-size:14px;color:var(--c4);z-index:3">Open an icon to see a page<span class="cur" style="margin-left:6px"></span></div>
+
+<sc-if value="{{hasWin}}" hint-placeholder-val="{{ true }}">
+<div style="position:absolute;left:{{w1.x}};top:{{w1.y}};width:{{w1.w}};height:{{w1.h}};max-height:{{w1.mh}};box-sizing:border-box;display:flex;flex-direction:column;border:2px solid var(--c);background:#0d1113;box-shadow:10px 10px 0 var(--sh);z-index:10">
+<div onPointerDown="{{w1.drag}}" onDoubleClick="{{w1.toggle}}" style="display:flex;align-items:center;justify-content:space-between;background:var(--c);color:#0d1113;text-shadow:none;padding:6px 8px 6px 12px;cursor:{{w1.cur}};user-select:none;touch-action:none">
+<div style="font-size:17px;font-weight:700">{{winTitle}}</div>
+<div style="display:flex;gap:8px">
+<button class="wbtn" aria-label="Maximise window" onClick="{{w1.toggle}}"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"></rect></svg></button>
+<button class="wbtn" aria-label="Close window" onClick="{{close}}"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="2"></path></svg></button>
+</div>
+</div>
+<div style="padding:10px 16px;border-bottom:1px solid var(--c4);font-size:16px"><span style="color:var(--c2)">Desktop</span> <span style="color:var(--c4)">/</span> {{crumb}}</div>
+<div style="flex:1;min-height:0;padding:22px 24px;overflow:auto;font-size:15px;line-height:1.55">
+
+<sc-if value="{{isWork}}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 20px">
+<sc-for list="{{projects}}" as="p" hint-placeholder-count="7">
+<button class="plain card" onClick="{{p.open}}" style="text-align:center">
+<div class="th" style="aspect-ratio:16/10;border:1px solid var(--c4);background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(0,0,0,.25));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+<div class="px" style="font-size:28px;line-height:1">{{p.name}}</div>
+<div style="font-size:12px;color:var(--c2)">[ screenshot ]</div>
+</div>
+<div style="font-size:18px;margin-top:10px">{{p.name}}</div>
+<div style="font-size:14px;color:var(--c2)">{{p.tag}}</div>
+</button>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{isAbout}}" hint-placeholder-val="{{ true }}">
+<div class="px" style="font-size:64px;line-height:1">About</div>
+<p style="font-size:18px;margin:16px 0 0;max-width:560px">Backend engineer in Lagos, building APIs, real-time tools and payment infrastructure.</p>
+<div style="display:flex;gap:32px;margin-top:22px;align-items:flex-start">
+<div style="flex:1;min-width:0">
+<p style="font-size:18px;line-height:1.35;margin:0">I build the part of the product nobody sees and everybody depends on.</p>
+<p style="margin:14px 0 0;color:var(--c3)">Shipped payment gateways, real-time bots, data pipelines and on-chain tooling. Main stack is NestJS, Python and modern backend tooling, with blockchain integrations when the project needs them.</p>
+</div>
+<div style="width:300px;flex-shrink:0;font-size:14px">
+<sc-for list="{{facts}}" as="f" hint-placeholder-count="5">
+<div style="display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--c4)"><span style="color:var(--c2)">{{f.k}}</span><span style="text-align:right">{{f.v}}</span></div>
+</sc-for>
+</div>
+</div>
+
+<div class="px" style="font-size:52px;line-height:1;margin-top:48px">How a project runs</div>
+<div style="border:1px solid var(--c4);margin-top:20px">
+<div style="display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--c4)"><span>Setup: your project</span><span style="color:var(--c2)">Step {{stepNo}} of 4</span></div>
+<div style="display:flex">
+<div style="width:250px;flex-shrink:0;border-right:1px solid var(--c4)">
+<sc-for list="{{steps}}" as="st" hint-placeholder-count="4">
+<button class="plain" onClick="{{st.pick}}" style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 14px;background:{{st.bg}};color:{{st.fg}};text-shadow:{{st.ts}}"><span style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border:2px solid currentColor;display:inline-block;background:{{st.box}}"></span><span class="px" style="font-size:17px">{{st.name}}</span></span><span style="font-size:13px">{{st.when}}</span></button>
+</sc-for>
+</div>
+<div style="flex:1;min-width:0;padding:14px 18px">
+<div class="px" style="font-size:28px">{{step.name}}</div>
+<div style="color:var(--c2);font-size:14px">{{step.when}}</div>
+<p style="margin:10px 0 0">{{step.body}}</p>
+<div style="border-top:1px solid var(--c4);margin-top:14px;padding-top:10px;font-size:14px"><span style="color:var(--c2)">You get</span> <b>{{step.get}}</b></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:14px;padding:10px 14px;border-top:1px solid var(--c4)">
+<div style="flex:1;display:flex;gap:3px">
+<sc-for list="{{blocks}}" as="b" hint-placeholder-count="24"><span style="flex:1;height:12px;background:{{b.bg}}"></span></sc-for>
+</div>
+<button class="ghost" onClick="{{prevStep}}">Back</button>
+<button class="btn" onClick="{{nextStep}}">Next</button>
+</div>
+</div>
+
+<div class="px" style="font-size:52px;line-height:1;margin-top:48px">Timeline</div>
+<div style="margin-top:12px">
+<sc-for list="{{timeline}}" as="tl" hint-placeholder-count="4">
+<div style="display:flex;gap:24px;padding:16px 0;border-bottom:1px solid var(--c4)"><span class="px" style="font-size:32px;width:130px;flex-shrink:0;line-height:1">{{tl.y}}</span><span>{{tl.t}}</span></div>
+</sc-for>
+</div>
+
+<div class="px" style="font-size:52px;line-height:1;margin-top:48px">Clients</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+<span class="ghost">ZakatChain</span><span class="ghost">[Client]</span><span class="ghost">[Client]</span><span class="ghost">[Client]</span>
+</div>
+
+<div class="px" style="font-size:52px;line-height:1;margin-top:48px">Kind words</div>
+<div style="border:1px solid var(--c4);margin-top:16px">
+<div style="display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--c4)"><span>Inbox</span><span style="color:var(--c2)">2 messages</span></div>
+<sc-for list="{{inbox}}" as="m" hint-placeholder-count="2">
+<button class="plain" onClick="{{m.pick}}" style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:{{m.bg}};color:{{m.fg}};text-shadow:{{m.ts}};border-bottom:1px solid var(--c4)">
+<span class="px" style="width:38px;height:38px;flex-shrink:0;border:2px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:18px">{{m.ini}}</span>
+<span style="flex:1;min-width:0"><b>{{m.from}}</b> <span style="opacity:.75">{{m.org}}</span><br>{{m.subj}}</span>
+</button>
+<sc-if value="{{m.open}}" hint-placeholder-val="{{ false }}"><div style="padding:16px 20px 18px 64px;font-size:17px;line-height:1.45;border-bottom:1px solid var(--c4)">{{m.body}}</div></sc-if>
+</sc-for>
+</div>
+<div style="font-size:13px;color:var(--c2);margin-top:8px">* paraphrased: swap in the exact quotes from arkade.lol</div>
+
+<div class="px" style="font-size:52px;line-height:1;margin-top:48px">Questions</div>
+<div style="display:flex;border:1px solid var(--c4);margin-top:16px">
+<div style="width:250px;flex-shrink:0;border-right:1px solid var(--c4)">
+<sc-for list="{{faqs}}" as="q" hint-placeholder-count="5">
+<button class="plain" onClick="{{q.pick}}" style="display:flex;gap:10px;padding:9px 14px;background:{{q.bg}};color:{{q.fg}};text-shadow:{{q.ts}};font-size:14px"><span>?</span><span>{{q.q}}</span></button>
+</sc-for>
+</div>
+<div style="flex:1;min-width:0;padding:14px 18px">
+<div class="px" style="font-size:24px;line-height:1.1">{{faq.q}}</div>
+<p style="margin:10px 0 0">{{faq.a}}</p>
+<div style="border-top:1px solid var(--c4);margin-top:16px;padding-top:10px;font-size:14px">Something else? <a href="https://t.me/arkkkade">Message me</a> on Telegram.</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isServices}}" hint-placeholder-val="{{ false }}">
+<div class="px" style="font-size:64px;line-height:1">Services</div>
+<p style="font-size:17px;margin:16px 0 0;max-width:560px">Three things I build. Projects run fixed-scope or weekly, and every one starts with a short scoping call.</p>
+<sc-for list="{{services}}" as="s" hint-placeholder-count="3">
+<div style="display:flex;gap:24px;padding:26px 0;border-top:1px solid var(--c4);margin-top:24px">
+<div class="px" style="width:200px;flex-shrink:0;font-size:30px;line-height:1.05">{{s.name}}</div>
+<div style="flex:1;min-width:0">
+<div>{{s.desc}}</div>
+<div style="font-size:18px;font-weight:700;margin-top:12px">{{s.price}}</div>
+<a class="btn" href="https://t.me/arkkkade" style="margin-top:14px">Book a call</a>
+</div>
+<div style="width:200px;flex-shrink:0;font-size:14px;display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{s.items}}" as="i" hint-placeholder-count="3"><div style="display:flex;gap:8px"><span style="width:7px;height:7px;background:var(--c);margin-top:7px;flex-shrink:0"></span><span>{{i}}</span></div></sc-for>
+</div>
+</div>
+</sc-for>
+</sc-if>
+
+<sc-if value="{{isJournal}}" hint-placeholder-val="{{ false }}">
+<sc-for list="{{posts}}" as="j" hint-placeholder-count="3">
+<div style="display:flex;gap:20px;padding:12px 4px;border-bottom:1px solid var(--c4);align-items:flex-start">
+<div style="width:110px;flex-shrink:0;color:var(--c2);font-size:14px">{{j.date}}</div>
+<div style="flex:1;min-width:0"><div style="font-weight:700">{{j.title}}</div><div style="font-size:14px;color:var(--c3)">{{j.sum}}</div></div>
+<span style="border:1px solid var(--c4);padding:1px 8px;font-size:13px">{{j.tag}}</span>
+</div>
+</sc-for>
+<div style="font-size:13px;color:var(--c2);margin-top:12px">No posts on arkade.lol yet: these rows are slots for your first three.</div>
+</sc-if>
+
+<sc-if value="{{isContact}}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;gap:28px;align-items:flex-start">
+<form style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:12px;padding-bottom:8px;border-bottom:1px solid var(--c4)"><span style="width:60px;color:var(--c2)">To</span><b>arkade</b></div>
+<div style="display:flex;align-items:center;gap:12px"><label for="cf-from" style="width:60px;color:var(--c2)">From</label><input id="cf-from" class="fld" placeholder="Your name"></div>
+<div style="display:flex;align-items:center;gap:12px"><label for="cf-mail" style="width:60px;color:var(--c2)">Email</label><input id="cf-mail" class="fld" type="email" placeholder="you@company.com"></div>
+<div style="display:flex;align-items:center;gap:12px"><label for="cf-about" style="width:60px;color:var(--c2)">About</label><select id="cf-about" class="fld"><option>Pick one</option><option>Custom backend / API</option><option>Real-time systems &amp; bots</option><option>Payments &amp; integrations</option><option>Something else</option></select></div>
+<label for="cf-msg" style="color:var(--c2);margin-top:6px">Message</label>
+<textarea id="cf-msg" class="fld" rows="7" placeholder="What you're building, what you need, and when you need it live."></textarea>
+<div><button class="btn" type="button">Send</button></div>
+</form>
+<div style="width:220px;flex-shrink:0;border-left:1px solid var(--c4);padding-left:20px;display:flex;flex-direction:column;gap:16px;font-size:14px">
+<div><div style="color:var(--c2)">Write to</div><a href="https://t.me/arkkkade" style="font-weight:700">t.me/arkkkade</a></div>
+<div><div style="color:var(--c2)">Based in</div><b>Lagos, Nigeria</b></div>
+<div><div style="color:var(--c2)">Booking</div><b>Open for new backend &amp; systems projects.</b></div>
+<div><div style="color:var(--c2);margin-bottom:8px">Elsewhere</div>
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:10px"><a class="ghost" href="https://github.com/arkade-01">GitHub</a><a class="ghost" href="https://x.com/01_arkade">X</a><a class="ghost" href="https://www.linkedin.com/in/Noahbiliamin15">LinkedIn</a></div></div>
+</div>
+</div>
+</sc-if>
+
+</div>
+<div style="display:flex;justify-content:space-between;padding:8px 16px;border-top:1px solid var(--c4);font-size:15px;color:var(--c2)"><span>{{winTitle}}</span><span>{{winFoot}}</span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{hasProj}}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:{{w2.x}};top:{{w2.y}};width:{{w2.w}};height:{{w2.h}};max-height:{{w2.mh}};box-sizing:border-box;display:flex;flex-direction:column;border:2px solid var(--c);background:#0d1113;box-shadow:10px 10px 0 var(--sh);z-index:12">
+<div onPointerDown="{{w2.drag}}" onDoubleClick="{{w2.toggle}}" style="display:flex;align-items:center;justify-content:space-between;background:var(--c);color:#0d1113;text-shadow:none;padding:6px 8px 6px 12px;cursor:{{w2.cur}};user-select:none;touch-action:none">
+<div style="font-size:17px;font-weight:700">{{proj.name}}</div>
+<div style="display:flex;gap:8px">
+<button class="wbtn" aria-label="Maximise project window" onClick="{{w2.toggle}}"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"></rect></svg></button>
+<button class="wbtn" aria-label="Close project window" onClick="{{closeProj}}"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="2"></path></svg></button>
+</div>
+</div>
+<div style="padding:10px 16px;border-bottom:1px solid var(--c4);font-size:16px"><span style="color:var(--c2)">Desktop / Work /</span> {{proj.name}}</div>
+<div style="flex:1;min-height:0;padding:22px 24px;overflow:auto;font-size:15px;line-height:1.55">
+<div class="px" style="font-size:60px;line-height:1">{{proj.name}}</div>
+<p style="font-size:18px;margin:14px 0 0;max-width:560px">{{proj.desc}}</p>
+<div style="border:1px solid var(--c4);margin-top:22px;padding:4px 16px">
+<div style="display:flex;gap:20px;padding:9px 0;border-bottom:1px solid var(--c4)"><span style="width:90px;color:var(--c2)">Type</span><span>{{proj.tag}}</span></div>
+<div style="display:flex;gap:20px;padding:9px 0;border-bottom:1px solid var(--c4)"><span style="width:90px;color:var(--c2)">Role</span><span>Backend engineering</span></div>
+<div style="display:flex;gap:20px;padding:9px 0"><span style="width:90px;color:var(--c2)">Live</span><a href="{{proj.url}}">{{proj.host}}</a></div>
+</div>
+<div style="aspect-ratio:16/8;border:1px solid var(--c4);margin-top:22px;background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,0,0,.3));display:flex;align-items:center;justify-content:center;color:var(--c2)">[ screenshot or demo video ]</div>
+<div class="px" style="font-size:32px;margin-top:28px">The problem</div>
+<p style="margin:8px 0 0;color:var(--c3)">[What the client needed and why it was hard.]</p>
+<div class="px" style="font-size:32px;margin-top:22px">What I built</div>
+<p style="margin:8px 0 0;color:var(--c3)">[Architecture, stack, the interesting decisions.]</p>
+<button class="plain" onClick="{{proj.next}}" style="display:flex;justify-content:space-between;align-items:center;border:1px solid var(--c4);padding:14px 16px;margin-top:28px;width:100%;box-sizing:border-box"><span><span style="color:var(--c2);font-size:13px">Next project</span><br><span class="px" style="font-size:26px">{{proj.nextName}}</span></span><span style="font-size:22px">&gt;</span></button>
+</div>
+<div style="display:flex;justify-content:space-between;padding:8px 16px;border-top:1px solid var(--c4);font-size:15px;color:var(--c2)"><span>{{proj.tag}}</span><span>{{proj.host}}</span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{show404}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Error" style="position:absolute;left:300px;top:150px;width:440px;border:2px solid var(--c);background:#0d1113;box-shadow:10px 10px 0 var(--sh);z-index:30">
+<div style="display:flex;justify-content:space-between;align-items:center;background:var(--c);color:#0d1113;text-shadow:none;padding:5px 8px 5px 12px;font-weight:700">Error</div>
+<div style="display:flex;gap:16px;padding:20px">
+<svg width="40" height="36" viewBox="0 0 20 18" shape-rendering="crispEdges" aria-hidden="true"><path d="M10 0L20 18H0z" fill="currentColor"></path><path d="M9 6h2v6H9zM9 13h2v2H9z" fill="#0d1113"></path></svg>
+<div><div class="px" style="font-size:28px;line-height:1.1">This page isn't here</div>
+<p style="margin:10px 0 16px;font-size:14px;color:var(--c3)">The address may have changed, or the file was moved. Try the desktop or the Work folder.</p>
+<div style="display:flex;gap:10px"><button class="btn" onClick="{{close}}">Go to desktop</button><button class="ghost" onClick="{{openWork}}">Open Work</button></div></div>
+</div>
+</div>
+</sc-if>
+
+<div style="position:absolute;left:0;right:0;bottom:0;height:58px;display:flex;align-items:center;gap:8px;padding:0 24px 0 40px;border-top:1px solid var(--c4);background:rgba(8,10,11,.85);z-index:20;font-size:14px">
+<button class="tile" aria-label="Work" onClick="{{openWork}}"><svg width="16" height="14" viewBox="0 0 24 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h8v2h14v14H1z" fill="currentColor"></path></svg></button>
+<button class="tile" aria-label="About me" onClick="{{openAbout}}"><svg width="13" height="15" viewBox="0 0 18 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 0h11l5 5v15H1z" fill="currentColor"></path></svg></button>
+<button class="tile" aria-label="Services" onClick="{{openServices}}"><svg width="16" height="14" viewBox="0 0 24 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M8 1h8v4h7v14H1V5h7zM10 3v2h4V3z" fill="currentColor"></path></svg></button>
+<button class="tile" aria-label="Journal" onClick="{{openJournal}}"><svg width="13" height="15" viewBox="0 0 18 20" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 0h16v20H1z" fill="currentColor"></path></svg></button>
+<button class="tile" aria-label="Contact" onClick="{{openContact}}"><svg width="16" height="12" viewBox="0 0 24 17" shape-rendering="crispEdges" aria-hidden="true"><path d="M0 0h24v17H0z" fill="currentColor"></path></svg></button>
+<div style="width:1px;height:30px;background:var(--c4);margin:0 8px"></div>
+<sc-if value="{{hasWin}}" hint-placeholder-val="{{ true }}"><div style="border:2px solid var(--c);padding:2px 10px;font-weight:700;background:{{tab1bg}};color:{{tab1fg}};text-shadow:none">{{winTitle}}</div></sc-if>
+<sc-if value="{{hasProj}}" hint-placeholder-val="{{ false }}"><div style="background:var(--c);color:#0d1113;text-shadow:none;padding:4px 10px;font-weight:700">{{proj.name}}</div></sc-if>
+<sc-if value="{{idle}}" hint-placeholder-val="{{ false }}"><div style="white-space:nowrap;overflow:hidden">Now: open for backend &amp; systems projects <span style="color:var(--c2)">•</span> Telegram @arkkkade</div></sc-if>
+<div style="flex:1"></div>
+<sc-for list="{{themes}}" as="th" hint-placeholder-count="4">
+<button aria-label="{{th.label}}" onClick="{{th.pick}}" style="width:20px;height:20px;padding:0;cursor:pointer;background:{{th.c}};border:2px solid {{th.ring}}"></button>
+</sc-for>
+<sc-if value="{{soundOn}}" hint-placeholder-val="{{ false }}"><span style="margin-left:10px;background:var(--c);color:#0d1113;text-shadow:none;padding:2px 8px;font-size:13px;font-weight:700">Sound on. The speaker turns it off.</span></sc-if>
+<button class="tile" aria-label="{{soundLabel}}" onClick="{{toggleSound}}" style="margin-left:8px"><sc-if value="{{soundOn}}" hint-placeholder-val="{{ false }}"><svg width="16" height="14" viewBox="0 0 16 14" aria-hidden="true"><path d="M1 5h3l4-4v12L4 9H1z" fill="currentColor"></path><path d="M11 4c1.5 1.5 1.5 4.5 0 6M13 2c2.5 2.5 2.5 7.5 0 10" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></sc-if><sc-if value="{{soundOff}}" hint-placeholder-val="{{ true }}"><svg width="16" height="14" viewBox="0 0 16 14" aria-hidden="true"><path d="M1 5h3l4-4v12L4 9H1z" fill="currentColor"></path><path d="M11 4l4 6M15 4l-4 6" stroke="currentColor" stroke-width="1.5"></path></svg></sc-if></button>
+<span style="margin-left:10px;font-size:16px">{{clock}}</span>
+</div>
+
+<sc-if value="{{booting}}" hint-placeholder-val="{{ false }}">
+<button class="plain" onClick="{{boot}}" style="position:absolute;inset:0;z-index:40;background:#060809;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;width:auto">
+<span class="px" style="font-size:72px">arkade</span>
+<span style="font-size:17px">Press any key or the power button<span class="cur" style="margin-left:6px"></span></span>
+</button>
+</sc-if>
+
+</div>
+</div>
+<sc-if value="{{booting}}" hint-placeholder-val="{{ false }}"><button aria-label="Power on" onClick="{{boot}}" style="position:absolute;right:120px;top:836px;width:36px;height:16px;border:0;border-radius:3px;background:#a99f88;box-shadow:inset 0 -2px 0 rgba(0,0,0,.25);cursor:pointer"></button></sc-if>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"screen":{"editor":"enum","options":["amber","green","blue","white"],"default":"amber"},"bootScreen":{"editor":"boolean","default":false},"show404":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":900}}'>
+const THEMES = {
+  amber: { c: '#ffb547', c2: '#c98c3a', c3: '#f0c27e', c4: '#7a5420', g: 'rgba(255,170,40,.5)', sh: 'rgba(255,181,71,.14)' },
+  green: { c: '#4dff88', c2: '#36b862', c3: '#9dffbd', c4: '#1d6b3a', g: 'rgba(60,255,120,.45)', sh: 'rgba(77,255,136,.12)' },
+  blue:  { c: '#6cc8ff', c2: '#4f9fd1', c3: '#b0e0ff', c4: '#24577a', g: 'rgba(90,190,255,.45)', sh: 'rgba(108,200,255,.12)' },
+  white: { c: '#f2f2ea', c2: '#aaaaa2', c3: '#dcdcd2', c4: '#5c5c57', g: 'rgba(255,255,240,.35)', sh: 'rgba(242,242,234,.1)' }
+};
+const PROJECTS = [
+  { name: 'ArkPay', tag: 'Payments', host: 'ark-pay.vercel.app', url: 'https://ark-pay.vercel.app/', desc: 'Payment gateway backend for crypto-to-fiat conversion and settlement.' },
+  { name: 'Wayfinder', tag: 'NestJS API', host: 'wayfinder.fun', url: 'https://wayfinder.fun', desc: 'NestJS API that aggregates on-chain data to trace wallet identities, bridge activity and exit paths.' },
+  { name: 'Refuel Bot', tag: 'Telegram bot', host: 't.me/RefuelPreciumbot', url: 'https://t.me/RefuelPreciumbot', desc: 'Telegram bot backend that aggregates cross-chain bridge quotes via API and WebSocket streams.' },
+  { name: 'Prediction Arena', tag: 'Monad', host: 'prediction-arena-monad', url: 'https://prediction-arena-monad.onrender.com', desc: 'Backend for on-chain prediction markets and market resolution on Monad.' },
+  { name: 'ZakatChain', tag: 'Donations', host: 'zakatchain.io', url: 'https://zakatchain.io', desc: 'Donation-payments backend for transparent on-chain giving, paired with a full-stack app.' },
+  { name: 'NoNameCabal', tag: 'Solana bot', host: 't.me/noNameCabalBot', url: 'https://t.me/noNameCabalBot', desc: 'Solana trading bot backend for price monitoring and automated trades.' },
+  { name: 'Forge', tag: 'Multi-chain API', host: 'f0rge.vercel.app', url: 'https://f0rge.vercel.app/', desc: 'Multi-chain API for deploying configurable ERC-20/721 tokens, with deployment tracking.' }
+];
+const STEPS = [
+  { name: 'Scoping', when: 'Day 1', body: 'A short call about what you are building, the constraints and when it has to be live.', get: 'A fixed scope, or a weekly plan.' },
+  { name: 'Build', when: '[weeks]', body: 'I build the backend in small pieces you can test as they land.', get: '[What the client sees during the build]' },
+  { name: 'Ship', when: '[weeks]', body: 'Deploy to production and watch it under real traffic.', get: '[What ships]' },
+  { name: 'Handover', when: '[week]', body: 'Docs and a walkthrough so your team can run it without me.', get: '[Handover deliverables]' }
+];
+const INBOX = [
+  { ini: 'R', from: 'Rahman', org: '', subj: 'Delivered on a tight deadline', body: 'The only blockchain developer who delivered our product on a tight deadline: strong expertise, work ethic and collaboration.' },
+  { ini: 'J', from: '$JRD', org: 'ZakatChain', subj: 'A key role in building ZakatChain', body: 'Key role in building ZakatChain: smart contracts, wallet integration, and secure, user-friendly donation features.' }
+];
+const FAQS = [
+  { q: 'How much does a project cost?', a: 'Custom backend and API work starts at $2,000, real-time systems and bots at $3,500, and payments and integrations at $8,000.' },
+  { q: 'Fixed scope or weekly?', a: 'Either. We pick one after the scoping call, depending on how settled the spec is.' },
+  { q: 'What stack do you use?', a: 'Mostly NestJS and Python, with blockchain integrations when the project needs them.' },
+  { q: 'Do you handle crypto payments?', a: 'Yes: crypto and traditional payment flows, including settlement logic. ArkPay is an example.' },
+  { q: 'How do I start?', a: 'Message me on Telegram (@arkkkade) with what you are building and when you need it live.' }
+];
+class Component extends DCLogic {
+  constructor(p){ super(p); this.state = { booted: false, win: null, proj: null, clock: '', x: 200, y: 22, max: false, px: 320, py: 60, pmax: false, theme: null, step: 0, msg: 0, faq: 0, sound: false }; }
+  componentDidMount(){
+    const tick = () => { const d = new Date(); this.setState({ clock: d.toTimeString().slice(0,5) }); };
+    tick(); this.t = setInterval(tick, 15000);
+  }
+  componentWillUnmount(){ clearInterval(this.t); }
+  frame(kx, ky, km, width) {
+    const s = this.state, max = s[km];
+    return {
+      x: max ? '0px' : s[kx] + 'px', y: max ? '0px' : s[ky] + 'px', w: max ? '100%' : width,
+      h: max ? 'calc(100% - 58px)' : 'auto', mh: max ? 'none' : '640px', cur: max ? 'default' : 'move',
+      toggle: () => this.setState({ [km]: !this.state[km] }),
+      drag: (e) => {
+        if (this.state[km] || (e.target.closest && e.target.closest('button'))) return;
+        e.preventDefault();
+        const sx = e.clientX, sy = e.clientY, ox = this.state[kx], oy = this.state[ky];
+        const mv = (ev) => this.setState({ [kx]: Math.max(-300, Math.min(900, ox + ev.clientX - sx)), [ky]: Math.max(0, Math.min(620, oy + ev.clientY - sy)) });
+        const up = () => { window.removeEventListener('pointermove', mv); window.removeEventListener('pointerup', up); };
+        window.addEventListener('pointermove', mv); window.addEventListener('pointerup', up);
+      }
+    };
+  }
+  renderVals() {
+    const s = this.state, w = s.win;
+    const themeKey = THEMES[s.theme] ? s.theme : (THEMES[this.props.screen] ? this.props.screen : 'amber');
+    const titles = { about: 'About me', work: 'Work', services: 'Services', journal: 'Journal', contact: 'New message' };
+    const crumbs = { about: 'About me', work: 'Work', services: 'Services', journal: 'Journal', contact: 'Contact' };
+    const foots = { about: 'Replies on Telegram', work: 'Newest first', services: 'Open for new projects', journal: 'Newest first', contact: 'Replies on Telegram' };
+    const widths = { about: '780px', work: '780px', services: '780px', journal: '760px', contact: '760px' };
+    const open = (k) => () => this.setState({ win: k, proj: null });
+    const openProj = (i) => () => this.setState({ win: 'work', proj: i });
+    const pi = s.proj, P = pi === null ? null : PROJECTS[pi];
+    const hl = (on) => ({ bg: on ? 'var(--c)' : 'transparent', fg: on ? '#0d1113' : 'var(--c)', ts: on ? 'none' : 'inherit' });
+    const st = STEPS[s.step], filled = (s.step + 1) * 6;
+    return {
+      booting: !!this.props.bootScreen && !s.booted, boot: () => this.setState({ booted: true }),
+      show404: !!this.props.show404 && !w,
+      hasWin: !!w, hasProj: !!P, idle: !w,
+      isAbout: w === 'about', isWork: w === 'work', isServices: w === 'services', isJournal: w === 'journal', isContact: w === 'contact',
+      winTitle: titles[w] || '', crumb: crumbs[w] || '', winFoot: foots[w] || '', clock: s.clock || '00:00',
+      tab1bg: P ? 'transparent' : 'var(--c)', tab1fg: P ? 'var(--c)' : '#0d1113',
+      w1: this.frame('x', 'y', 'max', widths[w] || '760px'),
+      w2: this.frame('px', 'py', 'pmax', '700px'),
+      openAbout: open('about'), openWork: open('work'), openServices: open('services'), openJournal: open('journal'), openContact: open('contact'),
+      close: () => this.setState({ win: null, proj: null, max: false }),
+      closeProj: () => this.setState({ proj: null, pmax: false }),
+      soundOn: s.sound, soundOff: !s.sound, soundLabel: s.sound ? 'Turn sound off' : 'Turn sound on',
+      toggleSound: () => this.setState({ sound: !this.state.sound }),
+      t: THEMES[themeKey],
+      themes: Object.keys(THEMES).map((k) => ({ label: k + ' screen', c: THEMES[k].c, ring: k === themeKey ? '#ffffff' : '#0d1113', pick: () => this.setState({ theme: k }) })),
+      projects: PROJECTS.map((p, i) => ({ ...p, open: openProj(i) })),
+      proj: P ? { ...P, next: openProj((pi + 1) % PROJECTS.length), nextName: PROJECTS[(pi + 1) % PROJECTS.length].name } : { name: '', tag: '', host: '', url: '#', desc: '', nextName: '' },
+      facts: [
+        { k: 'Based in', v: 'Lagos, Nigeria' }, { k: 'Focus', v: 'Backend & systems' }, { k: 'Stack', v: 'NestJS, Python' },
+        { k: 'Also', v: 'On-chain integrations' }, { k: 'Replies', v: 'On Telegram' }
+      ],
+      stepNo: s.step + 1, step: st,
+      steps: STEPS.map((x, i) => ({ ...x, ...hl(i === s.step), box: i < s.step ? 'currentColor' : 'transparent', pick: () => this.setState({ step: i }) })),
+      blocks: Array.from({ length: 24 }, (_, i) => ({ bg: i < filled ? 'var(--c)' : 'rgba(255,255,255,.07)' })),
+      prevStep: () => this.setState({ step: Math.max(0, this.state.step - 1) }),
+      nextStep: () => this.setState({ step: Math.min(3, this.state.step + 1) }),
+      timeline: [
+        { y: '2021', t: 'Started a BSc in Computer Science at Bowen University.' },
+        { y: '2025', t: 'Graduated, BSc Computer Science.' },
+        { y: '2026', t: 'Junior Backend Developer at TagoCash (remote, May to November).' },
+        { y: 'Now', t: 'Booking new backend and systems projects.' }
+      ],
+      inbox: INBOX.map((m, i) => ({ ...m, ...hl(i === s.msg), open: i === s.msg, pick: () => this.setState({ msg: i }) })),
+      faq: FAQS[s.faq],
+      faqs: FAQS.map((q, i) => ({ ...q, ...hl(i === s.faq), pick: () => this.setState({ faq: i }) })),
+      services: [
+        { name: 'Custom Backend / API', desc: 'Production APIs in NestJS, Python or similar.', price: 'From $2,000 (to $5,000)', items: ['NestJS or Python', 'API design and build', 'Fixed scope or weekly'] },
+        { name: 'Real-time Systems & Bots', desc: 'Telegram bots, WebSockets, automation and live data.', price: 'From $3,500 (to $7,000)', items: ['Telegram bots', 'WebSocket streams', 'Automation', 'Live data'] },
+        { name: 'Payments & Integrations', desc: 'Crypto and traditional payment flows, with the settlement logic behind them.', price: 'From $8,000 (to $20,000)', items: ['Crypto payment flows', 'Traditional payment flows', 'Settlement logic'] }
+      ],
+      posts: [
+        { date: '[Mon DD, YYYY]', title: '[Post title]', sum: '[One-line summary]', tag: '[Tag]' },
+        { date: '[Mon DD, YYYY]', title: '[Post title]', sum: '[One-line summary]', tag: '[Tag]' },
+        { date: '[Mon DD, YYYY]', title: '[Post title]', sum: '[One-line summary]', tag: '[Tag]' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
