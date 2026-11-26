@@ -308,6 +308,9 @@
   touch-action: none;
 }
 .win:not(.win--active) .win__bar { background: var(--c2); }
+.win__bar,
+.win__crumbs,
+.win__foot { flex-shrink: 0; }
 .win__bar--drag { cursor: move; }
 .win__title {
   margin: 0;
@@ -525,6 +528,21 @@
 .fld:focus { outline: none; border-color: var(--c); }
 .fld option { background: #0d1113; }
 textarea.fld { resize: vertical; }
+
+/* CV --------------------------------------------------------------------- */
+.c3 { color: var(--c3); }
+.cv__contact { margin: 12px 0 16px; overflow-wrap: anywhere; }
+.cv__list { margin: 8px 0 0; padding: 0; list-style: none; }
+.cv__job { padding: 14px 0; border-bottom: 1px solid var(--c4); }
+.cv__jobhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.cv__points { margin: 8px 0 0; padding: 0; list-style: none; color: var(--c3); }
+.cv__points li { position: relative; padding-left: 18px; margin-top: 6px; }
+.cv__points li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 6px; height: 6px; background: var(--c); }
+.cv__entries { margin: 8px 0 0; padding: 0; list-style: none; }
+.cv__entries li { padding: 10px 0; border-bottom: 1px solid var(--c4); }
+.cv__projects { margin: 12px 0 0; padding: 0; list-style: none; border: 1px solid var(--c4); }
+.cv__projects li + li { border-top: 1px solid var(--c4); }
+.screen .cv__projects .row { text-decoration: none; }
 
 /* 404 dialog -------------------------------------------------------------- */
 .err {

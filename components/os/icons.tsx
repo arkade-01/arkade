@@ -132,6 +132,7 @@ export const PAGE_ICONS: Record<PageKey, (p: Props) => JSX.Element> = {
   services: BriefcaseIcon,
   journal: NotebookIcon,
   contact: EnvelopeIcon,
+  cv: CvIcon,
 };
 
 export function SpeakerIcon({ on }: { on: boolean }) {

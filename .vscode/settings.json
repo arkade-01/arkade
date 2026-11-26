@@ -1,5 +1,7 @@
 {
   "cSpell.ignoreWords": [
     "Arkade"
-  ]
+  ],
+  // Open pull requests against the fork (origin), not the upstream source repo.
+  "githubPullRequests.remotes": ["origin"]
 }

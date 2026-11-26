@@ -1,7 +1,7 @@
 import { getProject } from "@/data/projects";
 import { getPost } from "@/data/journal";
 
-export type PageKey = "work" | "about" | "services" | "journal" | "contact";
+export type PageKey = "work" | "about" | "services" | "journal" | "contact" | "cv";
 
 export type WinSpec =
   | { id: PageKey; kind: "page"; href: string }
@@ -16,9 +16,11 @@ export const PAGES: { key: PageKey; label: string; href: string }[] = [
   { key: "services", label: "Services", href: "/services" },
   { key: "journal", label: "Journal", href: "/journal" },
   { key: "contact", label: "Contact", href: "/contact" },
+  { key: "cv", label: "CV", href: "/resume" },
 ];
 
-const isPage = (s: string): s is PageKey => PAGES.some((p) => p.key === s);
+/** URL segment -> page, e.g. "resume" -> cv. */
+const pageForSegment = (seg: string) => PAGES.find((p) => p.href === `/${seg}`);
 
 /** Turns a URL path into the stack of windows it should show (bottom first). */
 export function parseRoute(pathname: string): Route {
@@ -26,9 +28,10 @@ export function parseRoute(pathname: string): Route {
   if (parts.length === 0) return { windows: [], notFound: false };
 
   const [first, second, ...rest] = parts;
-  if (!isPage(first) || rest.length > 0) return { windows: [], notFound: true };
+  const page = pageForSegment(first);
+  if (!page || rest.length > 0) return { windows: [], notFound: true };
 
-  const base: WinSpec = { id: first, kind: "page", href: `/${first}` };
+  const base: WinSpec = { id: page.key, kind: "page", href: page.href };
   if (!second) return { windows: [base], notFound: false };
 
   if (first === "work" && getProject(second)) {

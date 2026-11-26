@@ -18,6 +18,7 @@ import {
   EMAIL,
   elsewhere,
 } from "@/data/site";
+import { resume } from "@/data/resume";
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
@@ -500,5 +501,116 @@ export function ContactPage() {
         </div>
       </aside>
     </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// CV
+// ---------------------------------------------------------------------------
+
+export function CvPage() {
+  const r = resume;
+  return (
+    <article className="cv">
+      <h1 className="px h-xl">{r.name}</h1>
+      <p className="cv__contact">
+        <a href={`mailto:${r.email}`}>{r.email}</a>
+        {r.links.map((l) => (
+          <span key={l.name}>
+            <span className="dim"> / </span>
+            <a href={l.url} {...ext}>
+              {l.name}
+            </a>
+          </span>
+        ))}
+      </p>
+      <a className="btn" href={r.pdf} download>
+        Download PDF
+      </a>
+
+      <h2 className="px h-m">Summary</h2>
+      <p className="body">{r.summary}</p>
+
+      <h2 className="px h-m">Technical skills</h2>
+      <dl className="kv">
+        {r.skills.map((s) => (
+          <div key={s.k}>
+            <dt>{s.k}</dt>
+            <dd>{s.v}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <h2 className="px h-m">Work experience</h2>
+      <ol className="cv__list">
+        {r.experience.map((e) => (
+          <li key={e.role + e.org} className="cv__job">
+            <div className="cv__jobhead">
+              <span>
+                <b>{e.role}</b> <span className="c2">· {e.org}</span>
+              </span>
+              <span className="c2 small">{e.when}</span>
+            </div>
+            <ul className="cv__points">
+              {e.points.map((pt) => (
+                <li key={pt}>{pt}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ol>
+
+      <h2 className="px h-m">Open-source contributions</h2>
+      {r.openSource.map((o) => (
+        <div key={o.title} className="cv__job">
+          <b>{o.title}</b>
+          <p className="body">
+            {o.text}{" "}
+            <a href={o.link.url} {...ext}>
+              {o.link.label}
+            </a>
+          </p>
+        </div>
+      ))}
+
+      <h2 className="px h-m">Hackathon wins</h2>
+      <CvEntries items={r.hackathons} />
+
+      <h2 className="px h-m">Education &amp; qualifications</h2>
+      <CvEntries items={r.education} />
+
+      <h2 className="px h-m">Speaker roles</h2>
+      <CvEntries items={r.speaking.map((s) => ({ name: `${s.name} (${s.when})`, text: s.text }))} />
+
+      <h2 className="px h-m">Projects</h2>
+      <ul className="cv__projects">
+        {r.projects.map((slug) => {
+          const p = getProject(slug);
+          if (!p) return null;
+          return (
+            <li key={slug}>
+              <Link href={`/work/${slug}`} className="row">
+                <span>
+                  <b>{p.name}</b> <span className="c2 small">{p.type}</span>
+                </span>
+                <span aria-hidden="true">&gt;</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </article>
+  );
+}
+
+function CvEntries({ items }: { items: { name: string; text: string }[] }) {
+  return (
+    <ul className="cv__entries">
+      {items.map((it) => (
+        <li key={it.name}>
+          <b>{it.name}</b> <span className="c3">— {it.text}</span>
+        </li>
+      ))}
+    </ul>
   );
 }

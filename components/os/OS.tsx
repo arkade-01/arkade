@@ -7,9 +7,9 @@ import { BOOT_SCREEN, PHOSPHOR, PHOSPHORS, TELEGRAM, desktop } from "@/data/site
 import { getProject, hostOf } from "@/data/projects";
 import { getPost, formatDate } from "@/data/journal";
 import { PAGES, parseRoute, type PageKey, type WinSpec } from "./routes";
-import { CvIcon, PAGE_ICONS, SpeakerIcon, WarningIcon } from "./icons";
+import { PAGE_ICONS, SpeakerIcon, WarningIcon } from "./icons";
 import Window, { type Crumb } from "./Window";
-import { AboutPage, ContactPage, JournalPage, PostPage, ProjectPage, ServicesPage, WorkPage } from "./pages";
+import { AboutPage, ContactPage, CvPage, JournalPage, PostPage, ProjectPage, ServicesPage, WorkPage } from "./pages";
 import { sfx } from "./sound";
 import "./os.css";
 
@@ -19,6 +19,7 @@ const TITLES: Record<PageKey, string> = {
   services: "Services",
   journal: "Journal",
   contact: "New message",
+  cv: "CV",
 };
 const CRUMBS: Record<PageKey, string> = {
   work: "Work",
@@ -26,6 +27,7 @@ const CRUMBS: Record<PageKey, string> = {
   services: "Services",
   journal: "Journal",
   contact: "Contact",
+  cv: "CV",
 };
 const FOOTS: Record<PageKey, string> = {
   work: "Newest first",
@@ -33,8 +35,9 @@ const FOOTS: Record<PageKey, string> = {
   services: "Open for new projects",
   journal: "Newest first",
   contact: "Replies on Telegram",
+  cv: "PDF available",
 };
-const WIDTHS: Record<PageKey, number> = { work: 780, about: 780, services: 780, journal: 760, contact: 760 };
+const WIDTHS: Record<PageKey, number> = { work: 780, about: 780, services: 780, journal: 760, contact: 760, cv: 780 };
 
 const BOOT_KEY = "arkade:booted";
 const SOUND_KEY = "arkade:sound";
@@ -90,6 +93,8 @@ function content(w: WinSpec, child?: WinSpec) {
       return <JournalPage current={sub} />;
     case "contact":
       return <ContactPage />;
+    case "cv":
+      return <CvPage />;
   }
 }
 
@@ -230,10 +235,6 @@ export default function OS() {
                     </Link>
                   );
                 })}
-                <Link href="/resume" className="ic">
-                  <CvIcon />
-                  <span>CV</span>
-                </Link>
               </nav>
 
               <div className="hero">
