@@ -22,8 +22,8 @@ A dedicated Blockchain and Backend Developer with over 3+ years of experience bu
 ## Work Experience
 
 ### Junior Backend Developer | TagoCash
-*May 2026 – Present*
-- Build and ship features on a NestJS/Prisma backend for a cross-border digital wallet supporting instant transfers, QR payments, and local cash deposits across US, European, and African payment rails
+*May 2026 – Nov 2026*
+- Built and shipped features on a NestJS/Prisma backend for a cross-border digital wallet supporting instant transfers, QR payments, and local cash deposits across US, European, and African payment rails
 
 ### Lead Backend Developer | Roomz
 *April 2025 – Present*

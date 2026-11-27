@@ -20,9 +20,9 @@ export const resume = {
     {
       role: "Junior Backend Developer",
       org: "TagoCash",
-      when: "May 2026 – Present",
+      when: "May 2026 – Nov 2026",
       points: [
-        "Build and ship features on a NestJS/Prisma backend for a cross-border digital wallet supporting instant transfers, QR payments, and local cash deposits across US, European, and African payment rails",
+        "Built and shipped features on a NestJS/Prisma backend for a cross-border digital wallet supporting instant transfers, QR payments, and local cash deposits across US, European, and African payment rails",
       ],
     },
     {

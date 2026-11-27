@@ -31,6 +31,9 @@ type Props = {
 
 const MOBILE = "(max-width: 720px)";
 const TASKBAR = 58;
+/** Space kept clear above the taskbar for the docked music player, which
+    stands 30px taller than the taskbar (see .is-docked in os.css). */
+const DOCK = 36;
 
 export default function Window({
   title,
@@ -68,7 +71,8 @@ export default function Window({
     const ox = el.offsetLeft;
     const oy = el.offsetTop;
     const maxX = parent.clientWidth - 80;
-    const maxY = parent.clientHeight - TASKBAR - 40;
+    // Keep the title bar (and its buttons) above the docked player.
+    const maxY = parent.clientHeight - TASKBAR - DOCK - 40;
     const minX = 80 - el.offsetWidth;
 
     const move = (ev: PointerEvent) => {
@@ -95,7 +99,7 @@ export default function Window({
   const top = pos ? pos.y : 22 + level * 38;
   const place: React.CSSProperties = bottomRight
     ? { right: "24px", bottom: `${TASKBAR + 16}px`, maxHeight: `calc(100% - ${TASKBAR + 32}px)` }
-    : { left, top: `${top}px`, maxHeight: `min(640px, calc(100% - ${top + TASKBAR + 14}px))` };
+    : { left, top: `${top}px`, maxHeight: `min(640px, calc(100% - ${top + TASKBAR + DOCK}px))` };
 
   return (
     <section

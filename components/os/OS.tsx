@@ -298,7 +298,9 @@ export default function OS() {
       <div className="monitor">
         <div className="monitor__bezel">
           <div className={`screen${power === "booting" ? " screen--booting" : ""}`} style={vars}>
-            <div className="screen__content">
+            {/* "docked": the minimised player sits in the taskbar's right corner,
+                and windows keep clear of it (see os.css). */}
+            <div className={`screen__content${musicView === "min" ? " is-docked" : ""}`}>
               {/* Desktop */}
               <nav className="icons" aria-label="Desktop">
                 {PAGES.map((p) => {
