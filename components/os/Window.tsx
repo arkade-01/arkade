@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { CloseIcon, MaxIcon } from "./icons";
+import { CloseIcon, MaxIcon, MinIcon } from "./icons";
 
 export type Crumb = { label: string; href?: string };
 
@@ -15,6 +15,13 @@ type Props = {
   width: number;
   /** 0 for a page window, 1 for a window cascaded over it. */
   level: number;
+  /** Default spot before the first drag. */
+  placement?: "cascade" | "bottom-right";
+  className?: string;
+  /** Shows a minimise button (used by the Music window). */
+  onMinimise?: () => void;
+  /** Collapsed to its minimised panel (styled by the caller's className). */
+  minimised?: boolean;
   z: number;
   active: boolean;
   onFocus: () => void;
@@ -32,6 +39,10 @@ export default function Window({
   footerRight,
   width,
   level,
+  placement = "cascade",
+  className,
+  onMinimise,
+  minimised = false,
   z,
   active,
   onFocus,
@@ -79,22 +90,24 @@ export default function Window({
   const toggleMax = () => setMax((m) => !m);
 
   // Before the first drag, position with CSS so the server render matches.
+  const bottomRight = !pos && placement === "bottom-right";
   const left = pos ? `${pos.x}px` : `max(12px, calc(50% - ${width / 2}px - 60px + ${level * 120}px))`;
   const top = pos ? pos.y : 22 + level * 38;
+  const place: React.CSSProperties = bottomRight
+    ? { right: "24px", bottom: `${TASKBAR + 16}px`, maxHeight: `calc(100% - ${TASKBAR + 32}px)` }
+    : { left, top: `${top}px`, maxHeight: `min(640px, calc(100% - ${top + TASKBAR + 14}px))` };
 
   return (
     <section
       ref={ref}
       role="dialog"
       aria-label={title}
-      className={`win${max ? " win--max" : ""}${active ? " win--active" : ""}`}
+      className={`win${max ? " win--max" : ""}${active ? " win--active" : ""}${minimised ? " win--min" : ""}${className ? ` ${className}` : ""}`}
       style={
         {
           zIndex: z,
-          left,
-          top: `${top}px`,
           width: `${width}px`,
-          maxHeight: `min(640px, calc(100% - ${top + TASKBAR + 14}px))`,
+          ...place,
         } as React.CSSProperties
       }
       onPointerDownCapture={onFocus}
@@ -108,6 +121,11 @@ export default function Window({
       >
         <h2 className="win__title">{title}</h2>
         <div className="win__btns">
+          {onMinimise && (
+            <button type="button" className="wbtn" aria-label={`Minimise ${title}`} onClick={onMinimise}>
+              <MinIcon />
+            </button>
+          )}
           <button type="button" className="wbtn" aria-label={max ? "Restore window" : "Maximise window"} onClick={toggleMax}>
             <MaxIcon />
           </button>

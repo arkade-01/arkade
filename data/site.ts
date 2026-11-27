@@ -22,6 +22,13 @@ export const PHOSPHORS: Record<
   white: { c: "#f2f2ea", c2: "#aaaaa2", c3: "#dcdcd2", c4: "#5c5c57", glow: "rgba(255,255,240,.35)", shadow: "rgba(242,242,234,.1)" },
 };
 
+/** Background music: Spotify track played in the Music window. */
+export const MUSIC = {
+  trackId: "6ZFbXIJkuI1dVNWvzJzown", // "Time", Hans Zimmer (Inception)
+  artist: "Hans Zimmer",
+  title: "Time",
+};
+
 // ---------------------------------------------------------------------------
 // Contact
 // ---------------------------------------------------------------------------

@@ -120,6 +120,22 @@ export function CvIcon({ size = 54, detail = true }: Props) {
   );
 }
 
+export function MusicIcon({ size = 60, detail = true }: Props) {
+  // Cassette tape.
+  return (
+    <Pixel
+      w={24}
+      h={16}
+      vb="0 0 24 16"
+      size={size}
+      body="M1 1h22v14H1z"
+      detail={detail ? "M3 3h18v1H3zM6 5h12v5H6zM6 12h12v3H6z" : undefined}
+      detailOpacity={0.55}
+      extra={detail ? "M8 7h2v2H8zM14 7h2v2h-2z" : undefined}
+    />
+  );
+}
+
 export function WarningIcon({ size = 40 }: Props) {
   return (
     <Pixel w={20} h={18} vb="0 0 20 18" size={size} body="M10 0L20 18H0z" detail="M9 6h2v6H9zM9 13h2v2H9z" detailOpacity={1} />
@@ -152,6 +168,14 @@ export function MaxIcon() {
   return (
     <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" shapeRendering="crispEdges">
       <rect x="1" y="1" width="10" height="10" fill="none" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
+export function MinIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" shapeRendering="crispEdges">
+      <rect x="1" y="9" width="10" height="2" fill="currentColor" />
     </svg>
   );
 }
